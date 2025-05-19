@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import {
   ArrowRight,
   Star,
@@ -26,6 +25,7 @@ import {
 import { Button } from "@/components/ui/button"
 import FaqSection from "@/components/FaqSection"
 import { marketingSystemFaqs } from "@/app/data/faqs"
+import ComparisonTable from "@/components/services/ComparisonTable"
 
 export default function MarketingSystemPage() {
   return (
@@ -77,7 +77,7 @@ export default function MarketingSystemPage() {
             <div className="relative mx-auto max-w-md rounded-lg bg-white p-6 shadow-xl">
               <div className="overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/images/agenda2.webp"
                   alt="Happy dentist with patients"
                   width={600}
                   height={400}
@@ -380,102 +380,20 @@ export default function MarketingSystemPage() {
         </section>
 
         {/* 6️⃣ Comparison Section */}
-        <section className="bg-white py-16">
-          <div className="container">
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="mb-4 text-3xl font-bold uppercase text-[#1D3557] md:text-4xl">
-                How We Compare to Other Agencies
-              </h2>
-              <p className="text-lg text-[#1D3557]">
-                Get more value and better results than agencies charging twice as much
-              </p>
-            </div>
-
-            <div className="mx-auto max-w-4xl overflow-hidden rounded-lg border shadow-md">
-              <div className="grid grid-cols-4 border-b bg-[#1D3557] p-4 text-white">
-                <div className="col-span-1 font-bold">Feature</div>
-                <div className="col-span-1 font-bold">Our System ($1,497)</div>
-                <div className="col-span-2 font-bold">Typical Agency ($5,000-$10,000)</div>
-              </div>
-
-              {[
-                {
-                  feature: "Complete SEO Package",
-                  ours: true,
-                  theirs: true,
-                },
-                {
-                  feature: "Google & Meta Ads",
-                  ours: true,
-                  theirs: true,
-                },
-                {
-                  feature: "Automated Lead Follow-Up",
-                  ours: true,
-                  theirs: false,
-                },
-                {
-                  feature: "AI-Powered Nurturing",
-                  ours: true,
-                  theirs: false,
-                },
-                {
-                  feature: "Dedicated Account Manager",
-                  ours: true,
-                  theirs: true,
-                },
-                {
-                  feature: "No Long-Term Contracts",
-                  ours: true,
-                  theirs: false,
-                },
-                {
-                  feature: "Money-Back Guarantee",
-                  ours: true,
-                  theirs: false,
-                },
-              ].map((item, i) => (
-                <div key={i} className="grid grid-cols-4 border-b p-4">
-                  <div className="col-span-1 text-[#1D3557]">{item.feature}</div>
-                  <div className="col-span-1 text-center">
-                    {item.ours ? (
-                      <Check className="mx-auto h-6 w-6 text-[#4CAF50]" />
-                    ) : (
-                      <X className="mx-auto h-6 w-6 text-red-500" />
-                    )}
-                  </div>
-                  <div className="col-span-2 text-center">
-                    {item.theirs ? (
-                      <Check className="mx-auto h-6 w-6 text-[#4CAF50]" />
-                    ) : (
-                      <X className="mx-auto h-6 w-6 text-red-500" />
-                    )}
-                  </div>
-                </div>
-              ))}
-
-              {/* Bottom Row - Price */}
-              <div className="grid grid-cols-4 bg-[#F5F5F5] p-4">
-                <div className="col-span-1 font-bold text-[#1D3557]">Monthly Investment</div>
-                <div className="col-span-1 text-center font-bold text-[#4CAF50]">$1,497/month</div>
-                <div className="col-span-2 text-center font-bold text-red-500">$5,000-$10,000/month</div>
-              </div>
-            </div>
-          </div>
-        </section>
+       <ComparisonTable />
 
         {/* 7️⃣ Results & Testimonials Section */}
-        <section className="bg-[#F5F5F5] py-16">
+        {/* <section className="bg-[#F5F5F5] py-16">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="mb-4 text-3xl font-bold uppercase text-[#1D3557] md:text-4xl">
                 More Patients, Less Stress
               </h2>
               <p className="text-lg text-[#1D3557]">Real results from real dental practices</p>
-            </div>
+            </div> */}
 
             {/* Case Study */}
-            <div className="mx-auto mb-16 max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
+            {/* <div className="mx-auto mb-16 max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
               <div className="grid md:grid-cols-2">
                 <div className="p-8">
                   <h3 className="mb-4 text-2xl font-bold text-[#1D3557]">Case Study: Smile Bright Dental</h3>
@@ -563,10 +481,10 @@ export default function MarketingSystemPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Testimonials */}
-            <div className="mx-auto max-w-4xl">
+            {/* <div className="mx-auto max-w-4xl">
               <div className="grid gap-8 md:grid-cols-3">
                 {[
                   {
@@ -628,10 +546,10 @@ export default function MarketingSystemPage() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* 8️⃣ How It Works Section */}
-        <section className="bg-white py-16">
+        <section className="bg-[#F5F5F5]/40 py-16">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="mb-4 text-3xl font-bold text-[#1D3557] md:text-4xl">
@@ -691,7 +609,7 @@ export default function MarketingSystemPage() {
                   <div className="relative">
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/placeholder.svg?height=500&width=400"
+                        src="/images/agenda2.webp"
                         alt="Marketing funnel visualization"
                         width={400}
                         height={500}
@@ -700,7 +618,7 @@ export default function MarketingSystemPage() {
                     </div>
 
                     {/* Overlay Stats */}
-                    <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/90 p-4 shadow-lg">
+                    <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white p-4 shadow-lg">
                       <div className="mb-2 text-center text-sm font-bold text-[#1D3557]">Average Results</div>
                       <div className="grid grid-cols-3 gap-2 text-center">
                         <div>

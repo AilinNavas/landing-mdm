@@ -18,6 +18,8 @@ import {
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import FaqSection from "@/components/FaqSection"
+import { generalFaqs } from "@/app/data/faqs"
 
 export default function AboutUsPage() {
   return (
@@ -211,122 +213,6 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        {/* 4️⃣ Meet the Team Section */}
-        <section className="bg-[#F5F5F5] py-16">
-          <div className="container">
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="mb-4 text-3xl font-bold uppercase text-[#1D3557] md:text-4xl">Meet the Team</h2>
-              <p className="text-lg text-[#1D3557]">We're a team of experts who love helping dentists grow</p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-3">
-              {[
-                {
-                  name: "Joel Smith",
-                  role: "Founder",
-                  bio: "10+ years of marketing experience, passionate about making marketing stress-free for dentists.",
-                  image: "/placeholder.svg?height=400&width=400",
-                },
-                {
-                  name: "Sarah Johnson",
-                  role: "SEO Specialist",
-                  bio: "Helps dental websites rank higher and attract more patients with proven SEO strategies.",
-                  image: "/placeholder.svg?height=400&width=400",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "Web Designer",
-                  bio: "Builds high-converting, beautiful websites that drive new patient bookings.",
-                  image: "/placeholder.svg?height=400&width=400",
-                },
-              ].map((member, i) => (
-                <div key={i} className="flex flex-col items-center text-center">
-                  <div className="mb-4 h-48 w-48 overflow-hidden rounded-full">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      width={400}
-                      height={400}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <h3 className="mb-1 text-xl font-bold text-[#1D3557]">{member.name}</h3>
-                  <div className="mb-3 text-[#F4A261] font-medium">{member.role}</div>
-                  <p className="text-[#1D3557]">{member.bio}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 text-center">
-              <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90" size="lg">
-                Let's Work Together
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* 5️⃣ Real Results Section */}
-        <section className="bg-white py-16">
-          <div className="container">
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="mb-4 text-3xl font-bold uppercase text-[#1D3557] md:text-4xl">Real Results</h2>
-              <p className="text-lg text-[#1D3557]">Success stories from dentists like you</p>
-            </div>
-
-            <div className="mx-auto max-w-4xl">
-              <div className="grid gap-8 md:grid-cols-2">
-                {[
-                  {
-                    quote:
-                      "My practice grew by 40% in 6 months thanks to MUCHODENTALMARKETING. Their SEO strategy brought in exactly the kind of patients we wanted.",
-                    name: "Dr. Jennifer Adams",
-                    location: "Bright Smile Dental, Chicago",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "Finally, a marketing company that actually delivers results without overcharging! Their transparent approach is refreshing in this industry.",
-                    name: "Dr. Robert Williams",
-                    location: "Premier Dental Care, Dallas",
-                    rating: 5,
-                  },
-                ].map((testimonial, i) => (
-                  <div key={i} className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                    <div className="mb-4 flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-[#F4A261] text-[#F4A261]" />
-                      ))}
-                    </div>
-
-                    <blockquote className="mb-6 flex-1">
-                      <p className="text-lg font-medium italic text-[#1D3557]">"{testimonial.quote}"</p>
-                    </blockquote>
-
-                    <div className="flex items-center">
-                      <div className="mr-4 h-12 w-12 overflow-hidden rounded-full bg-[#1D3557]">
-                        <Image
-                          src="/placeholder.svg?height=100&width=100"
-                          alt={testimonial.name}
-                          width={100}
-                          height={100}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <div className="font-bold text-[#1D3557]">{testimonial.name}</div>
-                        <div className="text-[#A8A8A8]">{testimonial.location}</div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-10 text-center">
-              <Button className="bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90">See More Success Stories</Button>
-            </div>
-          </div>
-        </section>
 
         {/* 6️⃣ Our Commitment Section */}
         <section className="bg-[#1D3557] py-16 text-white">
@@ -381,7 +267,7 @@ export default function AboutUsPage() {
         </section>
 
         {/* 7️⃣ Trusted By Section */}
-        <section className="bg-white py-16">
+        {/* <section className="bg-white py-16">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="mb-4 text-3xl font-bold text-[#1D3557] md:text-4xl">Trusted By</h2>
@@ -416,7 +302,8 @@ export default function AboutUsPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <FaqSection  faqs={generalFaqs} />
       </main>
 
       {/* Sticky CTA Bar for Mobile */}

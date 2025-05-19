@@ -81,7 +81,7 @@ export default function WebDesignPage() {
                 </div>
                 <div className="overflow-hidden rounded-md">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/images/web-design.webp"
                     alt="Modern dental website design"
                     width={600}
                     height={400}
@@ -97,7 +97,7 @@ export default function WebDesignPage() {
                 </div>
                 <div className="overflow-hidden rounded-md">
                   <Image
-                    src="/placeholder.svg?height=300&width=150"
+                    src="/images/mobile.webp"
                     alt="Mobile dental website design"
                     width={150}
                     height={300}
@@ -326,88 +326,90 @@ export default function WebDesignPage() {
               <p className="text-lg text-[#1D3557]">See the difference a high-converting website makes</p>
             </div>
 
-            <div className="mx-auto mb-16 max-w-4xl">
-              <div className="grid gap-8 md:grid-cols-2">
-                {/* Before Website */}
-                <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
-                  <div className="mb-4 inline-block rounded-full bg-red-100 px-4 py-1 text-sm font-medium text-red-600">
-                    BEFORE
-                  </div>
-                  <div className="mb-4 overflow-hidden rounded-lg border border-gray-200">
-                    <Image
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="Before website redesign"
-                      width={600}
-                      height={400}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center">
-                      <X className="mr-2 h-5 w-5 text-red-500" />
-                      <span className="text-gray-600">Outdated design</span>
-                    </div>
-                    <div className="flex items-center">
-                      <X className="mr-2 h-5 w-5 text-red-500" />
-                      <span className="text-gray-600">Slow loading speed</span>
-                    </div>
-                    <div className="flex items-center">
-                      <X className="mr-2 h-5 w-5 text-red-500" />
-                      <span className="text-gray-600">Poor mobile experience</span>
-                    </div>
-                    <div className="flex items-center">
-                      <X className="mr-2 h-5 w-5 text-red-500" />
-                      <span className="text-gray-600">No clear call-to-action</span>
-                    </div>
-                    <div className="flex items-center">
-                      <X className="mr-2 h-5 w-5 text-red-500" />
-                      <span className="text-gray-600">Not optimized for SEO</span>
-                    </div>
-                  </div>
-                </div>
+          <div className="mx-auto mb-16 max-w-4xl">
+  <div className="grid gap-8 md:grid-cols-2">
+    {/* Before Website */}
+    <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+      <div className="mb-4 inline-block rounded-full bg-red-100 px-4 py-1 text-sm font-medium text-red-600">
+        BEFORE
+      </div>
+      <div className="mb-4 overflow-hidden rounded-lg border border-gray-200">
+        <video
+          src="/videos/before.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="space-y-2">
+        <div className="flex items-center">
+          <X className="mr-2 h-5 w-5 text-red-500" />
+          <span className="text-gray-600">Outdated design</span>
+        </div>
+        <div className="flex items-center">
+          <X className="mr-2 h-5 w-5 text-red-500" />
+          <span className="text-gray-600">Slow loading speed</span>
+        </div>
+        <div className="flex items-center">
+          <X className="mr-2 h-5 w-5 text-red-500" />
+          <span className="text-gray-600">Poor mobile experience</span>
+        </div>
+        <div className="flex items-center">
+          <X className="mr-2 h-5 w-5 text-red-500" />
+          <span className="text-gray-600">No clear call-to-action</span>
+        </div>
+        <div className="flex items-center">
+          <X className="mr-2 h-5 w-5 text-red-500" />
+          <span className="text-gray-600">Not optimized for SEO</span>
+        </div>
+      </div>
+    </div>
 
-                {/* After Website */}
-                <div className="rounded-lg border border-[#4CAF50] bg-white p-6 shadow-md">
-                  <div className="mb-4 inline-block rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-600">
-                    AFTER
-                  </div>
-                  <div className="mb-4 overflow-hidden rounded-lg border border-gray-200">
-                    <Image
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="After website redesign"
-                      width={600}
-                      height={400}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">Modern, professional design</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">Lightning-fast loading</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">Fully responsive on all devices</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">Strategic CTAs that convert</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">SEO-optimized for higher rankings</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    {/* After Website */}
+    <div className="rounded-lg border border-[#4CAF50] bg-white p-6 shadow-md">
+      <div className="mb-4 inline-block rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-600">
+        AFTER
+      </div>
+      <div className="mb-4 overflow-hidden rounded-lg border border-gray-200">
+        <video
+          src="/videos/after.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="space-y-2">
+        <div className="flex items-center">
+          <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+          <span className="font-medium text-[#1D3557]">Modern, professional design</span>
+        </div>
+        <div className="flex items-center">
+          <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+          <span className="font-medium text-[#1D3557]">Lightning-fast loading</span>
+        </div>
+        <div className="flex items-center">
+          <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+          <span className="font-medium text-[#1D3557]">Fully responsive on all devices</span>
+        </div>
+        <div className="flex items-center">
+          <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+          <span className="font-medium text-[#1D3557]">Strategic CTAs that convert</span>
+        </div>
+        <div className="flex items-center">
+          <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+          <span className="font-medium text-[#1D3557]">SEO-optimized for higher rankings</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
             {/* Testimonials */}
-            <div className="mx-auto max-w-4xl">
+            {/* <div className="mx-auto max-w-4xl">
               <h3 className="mb-8 text-center text-2xl font-bold text-[#1D3557]">
                 What Our Clients Say About Their New Websites
               </h3>
@@ -457,7 +459,7 @@ export default function WebDesignPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <div className="mt-10 text-center">
               <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90" size="lg">

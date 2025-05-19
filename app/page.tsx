@@ -235,13 +235,13 @@ export default function Home() {
                     </p>
 
                     <div className="flex items-center">
-                      <div className="mr-4 h-12 w-12 overflow-hidden rounded-full bg-[#1D3557]">
+                      <div className="mr-4 h-20 w-20 overflow-hidden rounded-full bg-[#1D3557]">
                         <Image
                           src="/images/neal.png"
                           alt="Dr. Neal Horn"
                           width={100}
                           height={100}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full"
                         />
                       </div>
                       <div>

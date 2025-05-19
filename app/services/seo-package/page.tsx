@@ -27,7 +27,7 @@ import { seoPackageFaqs } from "@/app/data/faqs"
 export default function SEOPackagePage() {
   return (
     <div className="flex min-h-screen flex-col">
-    
+
 
       <main className="flex-1">
         {/* 1️⃣ Hero Section */}
@@ -170,7 +170,7 @@ export default function SEOPackagePage() {
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="mb-4 text-3xl font-bold uppercase text-[#1D3557] md:text-4xl">
-                What's Included in Your $697 SEO Package?
+                What's Included in Your <span className="text-[#4CAF50]">$697</span> SEO Package?
               </h2>
               <p className="text-lg text-[#1D3557]">
                 Everything you need to dominate local search and attract more patients
@@ -237,7 +237,7 @@ export default function SEOPackagePage() {
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="mb-4 text-3xl font-bold uppercase md:text-4xl">
-                Others Charge $3,000 – We Deliver the Same Results for $697!
+                Others Charge $3,000 – We Deliver the Same Results for <span className="text-[#4CAF50]">$697</span> !
               </h2>
               <p className="text-lg">See how our affordable SEO package compares to overpriced competitors</p>
             </div>
@@ -245,8 +245,8 @@ export default function SEOPackagePage() {
             <div className="mx-auto max-w-4xl overflow-hidden rounded-lg bg-white">
               <div className="grid grid-cols-3 border-b p-4">
                 <div className="col-span-1 font-bold text-[#1D3557]">Feature</div>
-                <div className="col-span-1 font-bold text-[#1D3557]">Our SEO ($697)</div>
-                <div className="col-span-1 font-bold text-[#1D3557]">Typical SEO ($3,000+)</div>
+                <div className="col-span-1 font-bold text-[#1D3557] text-center">Our SEO ($697)</div>
+                <div className="col-span-1 font-bold text-[#1D3557] text-center">Typical SEO ($3,000+)</div>
               </div>
 
               {[
@@ -308,8 +308,8 @@ export default function SEOPackagePage() {
               {/* Bottom Row - Price */}
               <div className="grid grid-cols-3 bg-[#F5F5F5] p-4">
                 <div className="col-span-1 font-bold text-[#1D3557]">Monthly Investment</div>
-                <div className="col-span-1 text-center font-bold text-[#4CAF50]">$697/month</div>
-                <div className="col-span-1 text-center font-bold text-red-500">$3,000+/month</div>
+                <div className="col-span-1 text-center font-bold text-[#4CAF50]">$697<span className="block md:inline">/month</span></div>
+                <div className="col-span-1 text-center font-bold text-red-500">$3,000+<span className="block md:inline">/month</span></div>
               </div>
             </div>
 
@@ -342,7 +342,7 @@ export default function SEOPackagePage() {
                   </div>
                   <div className="mb-4 h-64 overflow-hidden rounded-lg bg-gray-100">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/images/before.webp"
                       alt="Before SEO optimization"
                       width={600}
                       height={400}
@@ -371,7 +371,7 @@ export default function SEOPackagePage() {
                   </div>
                   <div className="mb-4 h-64 overflow-hidden rounded-lg bg-gray-100">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/images/after.webp"
                       alt="After SEO optimization"
                       width={600}
                       height={400}
@@ -398,20 +398,13 @@ export default function SEOPackagePage() {
 
             {/* Testimonials */}
             <div className="mx-auto max-w-4xl">
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid gap-8">
                 {[
                   {
                     quote:
-                      "We went from invisible to the first page of Google in 3 months! Best $697 we've ever spent.",
-                    name: "Dr. Thompson",
-                    location: "Miami Dental Associates",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "After wasting thousands with another agency, MUCHODENTALMARKETING delivered real results at a fraction of the cost.",
-                    name: "Dr. Williams",
-                    location: "Bright Smile Dental",
+                      "Joel has been a valuable asset to my endodontic practice. He skills with SEO have constantly positioned my practice at the top of the search results.I would not hesitate to recommend Joel to anyone looking to better position their practice through digital marketing.",
+                    name: "Dr. Neal Horn",
+                    location: "Southside Endodontics, Fort Worth, TX",
                     rating: 5,
                   },
                 ].map((testimonial, i) => (
@@ -427,13 +420,14 @@ export default function SEOPackagePage() {
                     </blockquote>
 
                     <div className="flex items-center">
-                      <div className="mr-4 h-12 w-12 overflow-hidden rounded-full bg-[#1D3557]">
+                      <div className="mr-4 h-20 w-20 overflow-hidden rounded-full bg-[#1D3557]">
                         <Image
-                          src="/placeholder.svg?height=100&width=100"
+                          src="/images/neal.png"
                           alt={testimonial.name}
-                          width={100}
-                          height={100}
-                          className="h-full w-full object-cover"
+                          width={500}
+                          height={500}
+                          quality={100}
+                          className="h-full w-full"
                         />
                       </div>
                       <div>
@@ -445,6 +439,7 @@ export default function SEOPackagePage() {
                 ))}
               </div>
             </div>
+
 
             <div className="mt-10 text-center">
               <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90" size="lg">
@@ -488,8 +483,8 @@ export default function SEOPackagePage() {
         </section>
 
         {/* FAQ Section */}
-       
-       <FaqSection faqs={seoPackageFaqs} />
+
+        <FaqSection faqs={seoPackageFaqs} />
       </main>
 
       {/* Sticky CTA Bar */}
@@ -505,7 +500,7 @@ export default function SEOPackagePage() {
         </div>
       </div>
 
-    
+
     </div>
   )
 }
