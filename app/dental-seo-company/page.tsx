@@ -52,7 +52,7 @@ export default function DentalSEOCompanyPage() {
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
-                  <span className="text-sm font-medium">60-Day Money-Back Guarantee</span>
+                  <span className="text-sm font-medium">90-Day Money-Back Guarantee</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
@@ -201,7 +201,7 @@ export default function DentalSEOCompanyPage() {
                   icon: <Shield className="h-10 w-10 text-[#F4A261]" />,
                   title: "Guaranteed Results",
                   description: [
-                    "60-day money-back guarantee. If we don't perform, you don't pay.",
+                    "90-day money-back guarantee. If we don't perform, you don't pay.",
                     "We put our money where our mouth is.",
                   ],
                 },
@@ -568,7 +568,7 @@ export default function DentalSEOCompanyPage() {
                     <div className="rounded-full bg-[#4CAF50]/10 px-6 py-3">
                       <div className="flex items-center">
                         <Shield className="mr-3 h-6 w-6 text-[#4CAF50]" />
-                        <span className="text-lg font-bold text-[#4CAF50]">60-Day Money-Back Guarantee</span>
+                        <span className="text-lg font-bold text-[#4CAF50]">90-Day Money-Back Guarantee</span>
                       </div>
                     </div>
                   </div>
@@ -599,7 +599,7 @@ export default function DentalSEOCompanyPage() {
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </Button>
                     <p className="mt-4 text-sm text-gray-500">
-                      No contracts. Cancel anytime. 60-day money-back guarantee.
+                      No contracts. Cancel anytime. 90-day money-back guarantee.
                     </p>
                   </div>
                 </div>
@@ -636,7 +636,7 @@ export default function DentalSEOCompanyPage() {
                 {
                   question: "What makes your dental SEO services different?",
                   answer:
-                    "We ONLY work with dentists and offer the best value in the industry. Our team specializes exclusively in dental SEO, so we understand the unique challenges and opportunities in your industry. Plus, at $697/month with no contracts and a 60-day money-back guarantee, we offer unbeatable value.",
+                    "We ONLY work with dentists and offer the best value in the industry. Our team specializes exclusively in dental SEO, so we understand the unique challenges and opportunities in your industry. Plus, at $697/month with no contracts and a 90-day money-back guarantee, we offer unbeatable value.",
                 },
                 {
                   question: "Do you guarantee first-page rankings?",
@@ -674,7 +674,7 @@ export default function DentalSEOCompanyPage() {
                   Ready to Rank Higher, Attract More Patients, and Grow Your Practice?
                 </h2>
 
-                <p className="mb-8 text-lg">Get started today with a risk-free 60-day money-back guarantee!</p>
+                <p className="mb-8 text-lg">Get started today with a risk-free 90-day money-back guarantee!</p>
 
                 <Button className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90" size="lg">
                   <span>Claim Your Free SEO Strategy</span>

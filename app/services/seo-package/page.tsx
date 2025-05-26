@@ -32,11 +32,7 @@ export default function SEOPackagePage() {
       <main className="flex-1">
         {/* 1️⃣ Hero Section */}
         <section className="relative overflow-hidden bg-[#1D3557] py-20 text-white">
-          {/* Background Elements */}
-          <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -left-[10%] top-[20%] h-[300px] w-[300px] rounded-full bg-[#F4A261]/20 blur-3xl"></div>
-            <div className="absolute right-[5%] top-[10%] h-[250px] w-[250px] rounded-full bg-[#4CAF50]/15 blur-3xl"></div>
-          </div>
+         
 
           <div className="container grid gap-8 md:grid-cols-2 md:items-center">
             <div className="space-y-6">
@@ -59,7 +55,7 @@ export default function SEOPackagePage() {
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
-                  <span className="text-sm font-medium">60-Day Money-Back Guarantee</span>
+                  <span className="text-sm font-medium">90-Day Money-Back Guarantee</span>
                 </div>
               </div>
 
@@ -281,7 +277,7 @@ export default function SEOPackagePage() {
                   theirs: false,
                 },
                 {
-                  feature: "60-Day Money-Back Guarantee",
+                  feature: "90-Day Money-Back Guarantee",
                   ours: true,
                   theirs: false,
                 },
@@ -420,14 +416,14 @@ export default function SEOPackagePage() {
                     </blockquote>
 
                     <div className="flex items-center">
-                      <div className="mr-4 h-20 w-20 overflow-hidden rounded-full bg-[#1D3557]">
+                      <div className="mr-4 h-20 w-20 overflow-hidden shrink-0 rounded-full bg-[#1D3557]">
                         <Image
                           src="/images/neal.png"
                           alt={testimonial.name}
                           width={500}
                           height={500}
                           quality={100}
-                          className="h-full w-full"
+                          className="h-full w-full object-cover"
                         />
                       </div>
                       <div>
@@ -461,7 +457,7 @@ export default function SEOPackagePage() {
                 <div className="mb-8 inline-block rounded-full bg-[#4CAF50]/10 px-6 py-3">
                   <div className="flex items-center">
                     <Shield className="mr-3 h-6 w-6 text-[#4CAF50]" />
-                    <span className="text-lg font-bold text-[#4CAF50]">60-Day Money-Back Guarantee</span>
+                    <span className="text-lg font-bold text-[#4CAF50]">90-Day Money-Back Guarantee</span>
                   </div>
                 </div>
 
@@ -494,7 +490,7 @@ export default function SEOPackagePage() {
             <div className="mr-4 text-2xl font-bold text-[#1D3557]">
               $697<span className="text-sm font-normal">/month</span>
             </div>
-            <div className="text-[#1D3557]">No contracts. 60-day money-back guarantee.</div>
+            <div className="text-[#1D3557]">No contracts. 90-day money-back guarantee.</div>
           </div>
           <Button className="bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90">Get Started Today</Button>
         </div>

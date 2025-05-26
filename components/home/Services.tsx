@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Marketing System",
-    price: "$1,497/month",
+    price: "$3,497/month",
     description: "Complete marketing solution with SEO, ads, and automation for aggressive growth.",
     features: [
       "Everything in SEO package",

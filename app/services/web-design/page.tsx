@@ -22,6 +22,8 @@ import {
 import { webDesignFaqs } from "@/app/data/faqs"
 import { Button } from "@/components/ui/button"
 import FaqSection from "@/components/FaqSection"
+import HeroVsl from "@/components/services/HeroVsl"
+import VslFinalSection from "@/components/services/VslFinalSection"
 
 export default function WebDesignPage() {
   return (
@@ -29,15 +31,54 @@ export default function WebDesignPage() {
 
 
       <main className="flex-1">
+
+        <HeroVsl />
         {/* 1️⃣ Hero Section */}
         <section className="relative overflow-hidden bg-[#1D3557] py-20 text-white">
-          {/* Background Elements */}
-          <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -left-[10%] top-[20%] h-[300px] w-[300px] rounded-full bg-[#F4A261]/20 blur-3xl"></div>
-            <div className="absolute right-[5%] top-[10%] h-[250px] w-[250px] rounded-full bg-[#4CAF50]/15 blur-3xl"></div>
-          </div>
-
+    
           <div className="container grid gap-8 md:grid-cols-2 md:items-center">
+
+
+            {/* Website Mockup */}
+            <div className="relative mx-auto max-w-md">
+              {/* Desktop Mockup */}
+              <div className="rounded-lg bg-white p-3 shadow-xl">
+                <div className="mb-2 flex items-center gap-1">
+                  <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                  <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="overflow-hidden rounded-md">
+                  <Image
+                    src="/images/web-design.webp"
+                    alt="Modern dental website design"
+                    width={600}
+                    height={400}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Mobile Mockup */}
+              <div className="absolute -bottom-4 md:-bottom-10 right-6 md:-right-10 w-[40%] rounded-lg bg-white p-2 shadow-xl">
+                <div className="mb-1 flex justify-center">
+                  <div className="h-1 w-8 rounded-full bg-gray-300"></div>
+                </div>
+                <div className="overflow-hidden rounded-md">
+                  <Image
+                    src="/images/mobile.webp"
+                    alt="Mobile dental website design"
+                    width={150}
+                    height={300}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="mt-1 flex justify-center">
+                  <div className="h-3 w-3 rounded-full border border-gray-300"></div>
+                </div>
+              </div>
+            </div>
+
             <div className="space-y-6">
               <h1 className="text-4xl font-bold uppercase leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Your Website Should Attract More Patients – <span className="text-[#F4A261]">Not Just Sit There.</span>
@@ -70,45 +111,6 @@ export default function WebDesignPage() {
               </div>
             </div>
 
-            {/* Website Mockup */}
-            <div className="relative mx-auto max-w-md">
-              {/* Desktop Mockup */}
-              <div className="rounded-lg bg-white p-3 shadow-xl">
-                <div className="mb-2 flex items-center gap-1">
-                  <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="overflow-hidden rounded-md">
-                  <Image
-                    src="/images/web-design.webp"
-                    alt="Modern dental website design"
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Mobile Mockup */}
-              <div className="absolute -bottom-10 -right-10 w-[40%] rounded-lg bg-white p-2 shadow-xl">
-                <div className="mb-1 flex justify-center">
-                  <div className="h-1 w-8 rounded-full bg-gray-300"></div>
-                </div>
-                <div className="overflow-hidden rounded-md">
-                  <Image
-                    src="/images/mobile.webp"
-                    alt="Mobile dental website design"
-                    width={150}
-                    height={300}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="mt-1 flex justify-center">
-                  <div className="h-3 w-3 rounded-full border border-gray-300"></div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -293,7 +295,7 @@ export default function WebDesignPage() {
                     icon: <Shield className="h-10 w-10 text-[#F4A261]" />,
                     title: "No Contracts. No Risk.",
                     description:
-                      "We earn your trust, not force you into contracts. Plus, a 60-day money-back guarantee.",
+                      "We earn your trust, not force you into contracts. Plus, a 90-day money-back guarantee.",
                   },
                 ].map((item, i) => (
                   <div
@@ -545,6 +547,8 @@ export default function WebDesignPage() {
           </div>
         </section>
 
+        <VslFinalSection />
+
         {/* 7️⃣ FAQ Section */}
 
         <FaqSection faqs={webDesignFaqs} />
@@ -561,7 +565,7 @@ export default function WebDesignPage() {
                 <div className="mb-8 inline-block rounded-full bg-white/10 px-6 py-3">
                   <div className="flex items-center">
                     <Shield className="mr-3 h-6 w-6 text-[#F4A261]" />
-                    <span className="text-lg font-bold text-[#F4A261]">60-Day Money-Back Guarantee</span>
+                    <span className="text-lg font-bold text-[#F4A261]">90-Day Money-Back Guarantee</span>
                   </div>
                 </div>
 
@@ -570,9 +574,9 @@ export default function WebDesignPage() {
                   visitors into patients.
                 </p>
 
-                <Button className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90" size="lg">
+                <Button className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90 mx-auto" >
                   <span>Get a High-Converting Website Now</span>
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+               
                 </Button>
 
                 <p className="mt-4 text-sm text-white/70">

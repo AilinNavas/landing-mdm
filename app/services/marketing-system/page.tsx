@@ -30,7 +30,7 @@ import ComparisonTable from "@/components/services/ComparisonTable"
 export default function MarketingSystemPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      
+
       <main className="flex-1">
         {/* 1️⃣ Hero Section */}
         <section className="relative overflow-hidden bg-[#1D3557] py-20 text-white">
@@ -57,11 +57,11 @@ export default function MarketingSystemPage() {
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
-                  <span className="text-sm font-medium">60-Day Money-Back Guarantee</span>
+                  <span className="text-sm font-medium">90-Day Money-Back Guarantee</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
-                  <span className="text-sm font-medium">$1,497/month</span>
+                  <span className="text-sm font-medium">$3,497/month</span>
                 </div>
               </div>
 
@@ -86,7 +86,7 @@ export default function MarketingSystemPage() {
               </div>
 
               {/* Dashboard Overlay */}
-              <div className="absolute -bottom-6 -right-6 w-[70%] rounded-lg bg-white p-4 shadow-xl">
+              <div className="absolute -bottom-6 right-6 md:-right-6 w-[70%] rounded-lg bg-white p-4 shadow-xl">
                 <div className="mb-2 flex items-center justify-between">
                   <div className="text-sm font-bold text-[#1D3557]">Campaign Results</div>
                   <div className="rounded-full bg-[#4CAF50]/20 px-2 py-1 text-xs font-medium text-[#4CAF50]">
@@ -96,14 +96,14 @@ export default function MarketingSystemPage() {
                 <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-gray-200">
                   <div className="h-full w-[75%] rounded-full bg-[#4CAF50]"></div>
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                <div className="grid grid-cols-3 gap-2 text-center text-xs ">
                   <div>
                     <div className="font-bold text-[#1D3557]">127</div>
                     <div className="text-gray-500">Leads</div>
                   </div>
                   <div>
                     <div className="font-bold text-[#1D3557]">43</div>
-                    <div className="text-gray-500">Appointments</div>
+                    <div className="text-gray-500 ">Appt</div>
                   </div>
                   <div>
                     <div className="font-bold text-[#1D3557]">$24k</div>
@@ -132,7 +132,7 @@ export default function MarketingSystemPage() {
                 {
                   icon: <DollarSign className="h-10 w-10 text-[#F4A261]" />,
                   title: "Save Money",
-                  description: "Most agencies charge $5,000+ per month – we do it better for $1,497/month.",
+                  description: "Most agencies charge $5,000+ per month – we do it better for $3,497/month.",
                 },
                 {
                   icon: <Users className="h-10 w-10 text-[#F4A261]" />,
@@ -296,17 +296,15 @@ export default function MarketingSystemPage() {
                 ].map((step, i) => (
                   <div key={i} className="relative">
                     <div
-                      className={`flex flex-col ${
-                        i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                      } items-center gap-8`}
+                      className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                        } items-center gap-8`}
                     >
                       <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-[#1D3557] text-xl font-bold text-white shadow-lg md:mx-8">
                         {step.icon}
                       </div>
                       <div
-                        className={`rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:w-[calc(50%-4rem)] ${
-                          i % 2 === 0 ? "md:text-left" : "md:text-right"
-                        }`}
+                        className={`rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:w-[calc(50%-4rem)] ${i % 2 === 0 ? "md:text-left" : "md:text-right"
+                          }`}
                       >
                         <h3 className="mb-2 text-xl font-bold text-[#1D3557]">
                           {step.step}. {step.title}
@@ -338,7 +336,7 @@ export default function MarketingSystemPage() {
                     icon: <Award className="h-10 w-10 text-[#F4A261]" />,
                     title: "Best Value for Money",
                     description:
-                      "Others charge $5,000-$10,000/month for similar services. We deliver better results for $1,497/month.",
+                      "Others charge $5,000-$10,000/month for similar services. We deliver better results for $3,497/month.",
                   },
                   {
                     icon: <Search className="h-10 w-10 text-[#F4A261]" />,
@@ -354,7 +352,7 @@ export default function MarketingSystemPage() {
                   },
                   {
                     icon: <CheckCircle className="h-10 w-10 text-[#F4A261]" />,
-                    title: "60-Day Money-Back Guarantee",
+                    title: "90-Day Money-Back Guarantee",
                     description:
                       "If you're not happy with our service within the first 60 days, we'll refund every penny. No questions asked.",
                   },
@@ -380,7 +378,7 @@ export default function MarketingSystemPage() {
         </section>
 
         {/* 6️⃣ Comparison Section */}
-       <ComparisonTable />
+        <ComparisonTable />
 
         {/* 7️⃣ Results & Testimonials Section */}
         {/* <section className="bg-[#F5F5F5] py-16">
@@ -392,8 +390,8 @@ export default function MarketingSystemPage() {
               <p className="text-lg text-[#1D3557]">Real results from real dental practices</p>
             </div> */}
 
-            {/* Case Study */}
-            {/* <div className="mx-auto mb-16 max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
+        {/* Case Study */}
+        {/* <div className="mx-auto mb-16 max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
               <div className="grid md:grid-cols-2">
                 <div className="p-8">
                   <h3 className="mb-4 text-2xl font-bold text-[#1D3557]">Case Study: Smile Bright Dental</h3>
@@ -483,8 +481,8 @@ export default function MarketingSystemPage() {
               </div>
             </div> */}
 
-            {/* Testimonials */}
-            {/* <div className="mx-auto max-w-4xl">
+        {/* Testimonials */}
+        {/* <div className="mx-auto max-w-4xl">
               <div className="grid gap-8 md:grid-cols-3">
                 {[
                   {
@@ -643,8 +641,8 @@ export default function MarketingSystemPage() {
         </section>
 
         {/* 9️⃣ FAQ Section */}
-        
-        <FaqSection faqs={marketingSystemFaqs}/>
+
+        <FaqSection faqs={marketingSystemFaqs} />
 
         {/* 🔟 Final CTA Section */}
         <section className="bg-[#1D3557] py-16 text-white">
@@ -658,7 +656,7 @@ export default function MarketingSystemPage() {
                 <div className="mb-8 inline-block rounded-full bg-white/10 px-6 py-3">
                   <div className="flex items-center">
                     <Shield className="mr-3 h-6 w-6 text-[#F4A261]" />
-                    <span className="text-lg font-bold text-[#F4A261]">60-Day Money-Back Guarantee</span>
+                    <span className="text-lg font-bold text-[#F4A261]">90-Day Money-Back Guarantee</span>
                   </div>
                 </div>
 
@@ -691,7 +689,7 @@ export default function MarketingSystemPage() {
         </div>
       </div>
 
-     
+
     </div>
   )
 }

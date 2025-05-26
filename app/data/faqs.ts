@@ -73,7 +73,7 @@ export const marketingSystemFaqs: FaqItem[] = [
    {
     question: "What if it doesn't work for my practice?",
     answer:
-      "We offer a 60-day money-back guarantee. If you don't see measurable improvements in your lead flow and new patient numbers, we'll refund your investment in full.",
+      "We offer a 90-day money-back guarantee. If you don't see measurable improvements in your lead flow and new patient numbers, we'll refund your investment in full.",
   },
    {
     question: "Is there a long-term contract?",
@@ -112,7 +112,7 @@ export const webDesignFaqs: FaqItem[] = [
    {
     question: "What if I'm not happy with my website?",
     answer:
-      "We offer a 60-day money-back guarantee. If you're not completely satisfied with your website within the first 60 days after launch, we'll refund your investment in full. We're that confident in our work.",
+      "We offer a 90-day money-back guarantee. If you're not completely satisfied with your website within the first 90 days after launch, we'll refund your investment in full. We're that confident in our work.",
   },
    {
     question: "Do you provide hosting and maintenance?",

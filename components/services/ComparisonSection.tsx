@@ -16,7 +16,7 @@ const features: FeatureRow[] = [
   { feature: 'Monthly Reporting', ours: true, theirs: true },
   { feature: 'No Contracts', ours: true, theirs: false },
   { feature: 'Affordable Pricing', ours: true, theirs: false },
-  { feature: '60-Day Money-Back Guarantee', ours: true, theirs: false },
+  { feature: '90-Day Money-Back Guarantee', ours: true, theirs: false },
 ];
 
 export default function ComparisonSection() {

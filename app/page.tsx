@@ -32,7 +32,7 @@ export default function Home() {
         <section className="relative overflow-hidden py-20">
           <div className="container grid gap-8 md:grid-cols-2 md:items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl font-bold leading-tight tracking-tighter text-[#1D3557] md:text-5xl lg:text-6xl">
+              <h1 className="  text-[#1D3557] text-4xl font-bold uppercase leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Dental SEO for <span className="text-[#4CAF50]">Revenue.</span>
                 <span className="block text-[#F4A261]">Not vanity.</span>
               </h1>
@@ -235,13 +235,13 @@ export default function Home() {
                     </p>
 
                     <div className="flex items-center">
-                      <div className="mr-4 h-20 w-20 overflow-hidden rounded-full bg-[#1D3557]">
+                      <div className="mr-4 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0">
                         <Image
                           src="/images/neal.png"
                           alt="Dr. Neal Horn"
-                          width={100}
-                          height={100}
-                          className="h-full w-full"
+                          width={80}
+                          height={80}
+                          className="w-full h-full object-cover"
                         />
                       </div>
                       <div>
@@ -249,6 +249,7 @@ export default function Home() {
                         <div className="text-[#A8A8A8]">Southside Endodontics, Fort Worth</div>
                       </div>
                     </div>
+
                   </blockquote>
 
                   <div className="mt-6 flex flex-col gap-4 sm:flex-row">
@@ -267,8 +268,8 @@ export default function Home() {
         </section>
 
         {/* 5️⃣ Pricing Section with Modern Animation */}
-      
-      <PricingSection />
+
+        <PricingSection />
 
         {/* Move the Process Section here, after Pricing */}
         {/* Process Section with Modern Animation */}
@@ -423,13 +424,13 @@ export default function Home() {
         </section>
 
         {/* 7️⃣ FAQ Section with Modern Animation */}
-        
-      <FaqSection faqs={generalFaqs} id="faqs" />
 
-        
+        <FaqSection faqs={generalFaqs} id="faqs" />
+
+
       </main>
- 
-     
+
+
     </div>
   )
 }

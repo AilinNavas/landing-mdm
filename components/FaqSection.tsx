@@ -14,7 +14,7 @@ const FaqSection: FC<FaqSectionProps> = ({ faqs, id }) => {
     <section id={id} className="relative bg-white py-16 overflow-hidden">
 
       <div className="container relative z-10">
-        <h2 className="mb-12 text-center text-3xl font-bold text-[#1D3557] md:text-4xl">
+        <h2 className="mb-12 text-center text-3xl font-bold text-[#1D3557] md:text-4xl uppercase">
           Frequently Asked Questions
         </h2>
         <div className="mx-auto max-w-3xl space-y-6">

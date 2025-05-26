@@ -29,11 +29,7 @@ export default function AboutUsPage() {
       <main className="flex-1">
         {/* 1️⃣ Hero Section */}
         <section className="relative overflow-hidden bg-[#1D3557] py-20 text-white">
-          {/* Background Elements */}
-          <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -left-[10%] top-[20%] h-[300px] w-[300px] rounded-full bg-[#F4A261]/20 blur-3xl"></div>
-            <div className="absolute right-[5%] top-[10%] h-[250px] w-[250px] rounded-full bg-[#4CAF50]/15 blur-3xl"></div>
-          </div>
+        
 
           <div className="container grid gap-8 md:grid-cols-2 md:items-center">
             <div className="space-y-6">
@@ -52,7 +48,7 @@ export default function AboutUsPage() {
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
-                  <span className="text-sm font-medium">60-Day Money-Back Guarantee</span>
+                  <span className="text-sm font-medium">90-Day Money-Back Guarantee</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
@@ -183,7 +179,7 @@ export default function AboutUsPage() {
                   icon: <Shield className="h-10 w-10 text-[#F4A261]" />,
                   title: "Risk-Free Guarantee",
                   description: [
-                    "60-day money-back guarantee. No questions asked.",
+                    "90-day money-back guarantee. No questions asked.",
                     "We put our money where our mouth is.",
                   ],
                 },

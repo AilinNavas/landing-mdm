@@ -34,7 +34,7 @@ export default function ComparisonTable() {
         {/* Encabezado (solo desktop) */}
         <div className="hidden md:grid grid-cols-4 bg-[#1D3557] text-white font-bold rounded-t-lg p-4">
           <div>Feature</div>
-          <div>Our System ($1,497)</div>
+          <div>Our System ($3,497)</div>
           <div className="col-span-2">Typical Agency ($5,000-$10,000)</div>
         </div>
 
@@ -71,7 +71,7 @@ export default function ComparisonTable() {
           <div className="bg-[#F5F5F5] p-4 text-[#1D3557] font-bold">
             <div className="hidden md:grid md:grid-cols-4">
               <div>Monthly Investment</div>
-              <div className="text-[#4CAF50] text-center">$1,497/month</div>
+              <div className="text-[#4CAF50] text-center">$3,497/month</div>
               <div className="text-red-500 text-center col-span-2">$5,000–$10,000/month</div>
             </div>
 
@@ -79,7 +79,7 @@ export default function ComparisonTable() {
             <div className="md:hidden space-y-4">
               <div className="flex justify-between items-center border-t pt-4">
                 <span>Our System</span>
-                <span className="text-[#4CAF50]">$1,497/month</span>
+                <span className="text-[#4CAF50]">$3,497/month</span>
               </div>
               <div className="flex justify-between items-center border-t pt-4">
                 <span>Typical Agency</span>
