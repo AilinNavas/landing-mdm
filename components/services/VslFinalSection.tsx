@@ -18,21 +18,14 @@ const VslFinalSection: FC = () => {
     <section className="bg-[#1D3557] py-20 px-4 md:px-8 lg:px-20 text-white">
       <div className="container">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 text-3xl md:text-4xl font-bold uppercase tracking-tight">
-            STILL THINKING ABOUT IT?
-          <span className="block font-medium mt-10 text-[#F4A261]">SEE EXACTLY WHAT YOU&apos;LL GET — BEFORE YOU EVER PAY.</span>
-          </h2>
+        
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase text-center">
+                 STILL THINKING ABOUT IT?
+              </h2>
+              <p className="text-xl leading-relaxed">See exactly what you&apos;ll get — before you ever pay.</p>
+            </div>
 
-          <div className="mx-auto mb-10 max-w-[700px]">
-            <p className="text-base md:text-lg text-[#DDE2E9]">
-              You&apos;ve made it this far for a reason.
-              <br />
-              We don&apos;t ask for payment upfront. We don&apos;t do lock-in contracts.
-              <br />
-              Just real strategy, real results — and a free preview of your homepage and service page before you
-              commit.
-            </p>
-          </div>
 
           {/* Video Container */}
           <div className="mt-10 mb-8 aspect-video max-w-4xl mx-auto">

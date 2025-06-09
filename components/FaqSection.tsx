@@ -14,10 +14,10 @@ const FaqSection: FC<FaqSectionProps> = ({ faqs, id }) => {
     <section id={id} className="relative bg-white py-16 overflow-hidden">
 
       <div className="container relative z-10">
-        <h2 className="mb-12 text-center text-3xl font-bold text-[#1D3557] md:text-4xl uppercase">
+        <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">
           Frequently Asked Questions
         </h2>
-        <div className="mx-auto max-w-3xl space-y-6">
+        <div className="mx-auto max-w-5xl space-y-6">
           {faqs.map((faq, i) => (
             <div
               key={i}
