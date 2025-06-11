@@ -52,11 +52,11 @@ export default function WebDesignPage() {
           <div className="container relative z-10">
             <div className="mx-auto text-center">
               {/* Enhanced Header */}
-              <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#F4A261]/10 px-6 py-2">
-                <svg className="h-5 w-5 text-[#F4A261] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#4CAF50]/10 px-6 py-2">
+                <svg className="h-5 w-5 text-[#4CAF50] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-sm font-semibold text-[#F4A261] uppercase tracking-wide">
+                <span className="text-sm font-semibold text-[#4CAF50] uppercase tracking-wide">
                   Lightning Fast Process
                 </span>
               </div>
@@ -64,7 +64,7 @@ export default function WebDesignPage() {
               <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase">
                 From Meeting to Mockup
                 <br />
-                <span className="text-[#F4A261]">In Just Days, Not Weeks</span>
+                <span className="text-[#4CAF50]">In Just Days, Not Weeks</span>
               </h2>
 
               <p className="mb-16 text-xl text-[#1D3557] leading-relaxed max-w-4xl mx-auto">
@@ -78,8 +78,8 @@ export default function WebDesignPage() {
                 {/* Connection line for desktop */}
                 <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
                   <div className="relative h-1">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D3557] via-[#F4A261] to-[#4CAF50] rounded-full opacity-20"></div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D3557] via-[#F4A261] to-[#4CAF50] rounded-full animate-pulse"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D3557] via-[#4CAF50] to-[#1D3557]  rounded-full opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D3557] via-[#4CAF50] to-[#1D3557]  rounded-full animate-pulse"></div>
                   </div>
                 </div>
 
@@ -112,14 +112,14 @@ export default function WebDesignPage() {
                       </div>
 
                       <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                        <h3 className="mb-4 text-2xl font-bold text-[#1D3557]">Step 1: The Brand Deep-Dive</h3>
+                        <h3 className="mb-4 text-2xl font-bold text-[#003366]">Step 1: The Brand Deep-Dive</h3>
                         <p className="text-[#64748b] leading-relaxed mb-6 text-lg">
                           We meet for 30 minutes. You talk—we listen. We uncover your voice, your goals, your style, and
                           everything that makes your practice unique.
                         </p>
                         <div className="flex items-center justify-center text-[#F4A261] font-semibold">
 
-                          <span className="text-[#1D3557]">You leave with zero pressure—and we get to work.</span>
+                          <span className="text-[#003366]">You leave with zero pressure—and we get to work.</span>
                         </div>
                       </div>
                     </div>
@@ -129,17 +129,17 @@ export default function WebDesignPage() {
                   <div className="relative group">
                     <div className="text-center">
                       {/* Time badge */}
-                      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#F4A261]/10 px-4 py-1">
-                        <Zap className="h-4 w-4 text-[#F4A261] mr-2" />
-                        <span className="text-sm font-semibold text-[#F4A261]">3-5 Days</span>
+                      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#4CAF50]/10 px-4 py-1">
+                        <Zap className="h-4 w-4 text-[#4CAF50] mr-2" />
+                        <span className="text-sm font-semibold text-[#4CAF50]">3-5 Days</span>
                       </div>
 
                       {/* Enhanced icon */}
                       <div className="mb-6 flex justify-center">
                         <div className="relative">
-                          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#F4A261] shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
+                          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#4CAF50] shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
                             <svg
-                              className="h-10 w-10 text-[#1D3557]"
+                              className="h-10 w-10 text-white"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -160,16 +160,16 @@ export default function WebDesignPage() {
                         </div>
                       </div>
 
-                      <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border-2 border-[#F4A261]/20">
-                        <div className="mb-3 inline-flex items-center justify-center rounded-full bg-[#F4A261]/10 px-3 py-1">
-                          <span className="text-xs font-bold text-[#F4A261] uppercase tracking-wide">Most Popular</span>
+                      <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border-2 border-[#4CAF50]/20">
+                        <div className="mb-3 inline-flex items-center justify-center rounded-full bg-[#4CAF50]/10 px-3 py-1">
+                          <span className="text-xs font-bold text-[#4CAF50] uppercase tracking-wide">FREE</span>
                         </div>
-                        <h3 className="mb-4 text-2xl font-bold text-[#1D3557]">Step 2: Your Free Custom Preview</h3>
+                        <h3 className="mb-4 text-2xl font-bold text-[#003366]">Step 2: Your Free Custom Preview</h3>
                         <p className="text-[#64748b] leading-relaxed mb-6 text-lg">
                           In just a few days, we present a fully custom homepage and service page—built around your
                           story, brand, and patients.
                         </p>
-                        <div className="flex items-center justify-center text-[#F4A261] font-semibold">
+                        <div className="flex items-center justify-center text-[#4CAF50] font-semibold">
 
                           <span>You see exactly what your site could be, before paying a dime.</span>
                         </div>
@@ -181,15 +181,15 @@ export default function WebDesignPage() {
                   <div className="relative group">
                     <div className="text-center">
                       {/* Time badge */}
-                      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#4CAF50]/10 px-4 py-1">
-                        <Rocket className="h-4 w-4 text-[#4CAF50] mr-2" />
-                        <span className="text-sm font-semibold text-[#4CAF50]">1-2 Weeks</span>
+                      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#1D3557]/10 px-4 py-1">
+                        <Rocket className="h-4 w-4 text-[#1D3557] mr-2" />
+                        <span className="text-sm font-semibold text-[#1D3557]">1-2 Weeks</span>
                       </div>
 
                       {/* Enhanced icon */}
                       <div className="mb-6 flex justify-center">
                         <div className="relative">
-                          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#4CAF50] shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
+                          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#1D3557] shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
                             <svg className="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
                                 strokeLinecap="round"
@@ -208,12 +208,12 @@ export default function WebDesignPage() {
                       </div>
 
                       <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                        <h3 className="mb-4 text-2xl font-bold text-[#1D3557]">Step 3: Final Touches & Launch</h3>
+                        <h3 className="mb-4 text-2xl font-bold text-[#003366]">Step 3: Final Touches & Launch</h3>
                         <p className="text-[#64748b] leading-relaxed mb-6 text-lg">
                           You approve the design, we handle the tech. Then we meet again to launch your new site and
                           show you how to turn it into a revenue-generating machine.
                         </p>
-                        <div className="flex items-center justify-center text-[#4CAF50] font-semibold">
+                        <div className="flex items-center justify-center text-[#1D3557] font-semibold">
 
                           <span>You're live—and in control.</span>
                         </div>
@@ -254,12 +254,12 @@ export default function WebDesignPage() {
                     }}
                   >
                     <Check className="hidden md:block mr-3 h-6 w-6" />
-                    <span className="hidden md:block">Book Your Free Preview — No Pressure. No Payment. Just Proof.</span>
+                    <span className="hidden md:block uppercase">Book Your Free Preview — No Pressure. No Payment. Just Proof.</span>
                     <span className="md:hidden">Book Your Free Preview</span>
                     <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1 hidden md:block" />
                   </Button>
 
-                  <p className="text-[#F4A261] font-semibold text-lg uppercase">See First. Pay Later. ✨</p>
+                  <p className="text-[#4CAF50] font-semibold text-lg uppercase">See First. Pay Later. </p>
 
                   {/* Trust indicators */}
                   <div className="mt-6 flex flex-col md:flex-row items-center justify-center md:space-x-6 text-sm text-[#64748b]">
@@ -268,7 +268,7 @@ export default function WebDesignPage() {
                       <span>100% Risk-Free</span>
                     </div>
                     <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-2 text-[#F4A261]" />
+                      <Clock className="h-4 w-4 mr-2 text-text-[#003366]" />
                       <span>Fast Turnaround</span>
                     </div>
                     <div className="flex items-center">
@@ -330,7 +330,7 @@ export default function WebDesignPage() {
 
             <div className="space-y-6">
               <h1 className="font-bold uppercase leading-tight tracking-tighter text-4xl md:text-5xl">
-                Your Website Should Attract More Patients – <span className="text-[#F4A261]">Not Just Sit There</span>
+                Your Website Should Attract More Patients – <span className="text-[#4CAF50]">Not Just Sit There</span>
               </h1>
               <p className="text-xl leading-relaxed">
                 We create high-converting dental websites that look great, load fast, and bring in new patients.
@@ -353,8 +353,8 @@ export default function WebDesignPage() {
               </div>
 
               <div className="pt-4">
-                <Button className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90" size="lg">
-                  <span>Get Started Today</span>
+                <Button className="group bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90" size="lg">
+                  <span className="uppercase text-lg">Get Started Today</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
@@ -372,7 +372,7 @@ export default function WebDesignPage() {
 
             <div className="mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-lg">
               <div className="mb-6 text-center">
-                <div className="mb-2 inline-block rounded-full bg-[#F4A261]/20 px-4 py-2 text-lg font-bold text-[#F4A261]">
+                <div className="mb-2 inline-block rounded-full bg-[#4CAF50]/20 px-4 py-2 text-lg font-bold text-[#4CAF50]">
                   Did You Know?
                 </div>
               </div>
@@ -380,24 +380,24 @@ export default function WebDesignPage() {
               <div className="grid gap-8 md:grid-cols-3">
                 {[
                   {
-                    icon: <Eye className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <Eye className="h-10 w-10 text-[#003366]" />,
                     stat: "75%",
                     description: "of patients judge a practice based on its website.",
                   },
                   {
-                    icon: <Clock className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <Clock className="h-10 w-10 text-[#003366]" />,
                     stat: "3 seconds",
                     description: "is all you have before visitors leave a slow website.",
                   },
                   {
-                    icon: <X className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <X className="h-10 w-10 text-[#003366]" />,
                     stat: "90%",
                     description: "of 'cheap' websites don't optimize for SEO or conversions.",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col items-center text-center">
                     <div className="mb-4 rounded-full bg-[#1D3557]/10 p-4">{item.icon}</div>
-                    <div className="mb-2 text-3xl font-bold text-[#1D3557]">{item.stat}</div>
+                    <div className="mb-2 text-3xl font-bold text-[#003366]">{item.stat}</div>
                     <p className="text-[#1D3557]">{item.description}</p>
                   </div>
                 ))}
@@ -419,25 +419,25 @@ export default function WebDesignPage() {
 
         {/* 3️⃣ Web Design Packages Section */}
         <section className="relative bg-white py-16">
-          <div className="container">
+          <div className="container mx-auto px-4">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">Our Web Design Packages</h2>
               <p className="text-xl leading-relaxed text-[#1D3557]">Choose the right website for your practice</p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2 border-2 justify-center">
               {/* Single Page Website */}
               <div className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-md transition-all hover:shadow-lg">
                 <div className="mb-4 flex items-center justify-between">
                   <div className="rounded-full bg-[#1D3557]/10 p-4">
                     <Laptop className="h-10 w-10 text-[#1D3557]" />
                   </div>
-                  <div className="rounded-full bg-[#F4A261]/10 px-4 py-2 text-sm font-medium text-[#F4A261]">
+                  <div className="rounded-full bg-[#003366]/10 px-4 py-2 text-sm font-medium text-[#003366]">
                     Ready in 10 Days
                   </div>
                 </div>
 
-                <h3 className="mb-2 text-2xl font-bold text-[#1D3557]">1. Single Page Website</h3>
+                <h3 className="mb-2 text-2xl font-bold text-[#003366] uppercase">1. Single Page Website</h3>
                 <div className="mb-4 text-3xl font-bold text-[#4CAF50]">$1,247</div>
                 <p className="mb-6 text-[#1D3557]">
                   Perfect for new practices or those who need a strong online presence FAST.
@@ -460,23 +460,23 @@ export default function WebDesignPage() {
                 </div>
 
                 <Button className="group bg-[#1D3557] hover:bg-[#1D3557]/90 w-full">
-                  <span>Get My Website in 10 Days</span>
+                  <span className="uppercase text-lg">Get My Website in 10 Days</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
 
               {/* Traditional Multi-Page Website */}
-              <div className="flex flex-col rounded-lg border-2 border-[#F4A261] bg-white p-6 shadow-lg transition-all hover:shadow-xl">
+              <div className="flex flex-col rounded-lg border-2 border-[#4CAF50] bg-white p-6 shadow-lg transition-all hover:shadow-xl">
                 <div className="mb-4 flex items-center justify-between">
-                  <div className="rounded-full bg-[#F4A261]/10 p-4">
-                    <Globe className="h-10 w-10 text-[#F4A261]" />
+                  <div className="rounded-full bg-[#4CAF50]/10 p-4">
+                    <Globe className="h-10 w-10 text-[#4CAF50]" />
                   </div>
                   <div className="rounded-full bg-[#4CAF50]/10 px-4 py-2 text-sm font-medium text-[#4CAF50]">
                     Most Popular
                   </div>
                 </div>
 
-                <h3 className="mb-2 text-2xl font-bold text-[#1D3557]">2. Traditional Multi-Page Website</h3>
+                <h3 className="mb-2 text-2xl font-bold text-[#003366] uppercase">2. Traditional Multi-Page Website</h3>
                 <div className="mb-4 text-3xl font-bold text-[#4CAF50]">$4,497</div>
                 <p className="mb-6 text-[#1D3557]">
                   For practices that want a premium website optimized for SEO & conversions.
@@ -500,8 +500,8 @@ export default function WebDesignPage() {
                   ))}
                 </div>
 
-                <Button className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90 w-full">
-                  <span>Get a High-Converting Website</span>
+                <Button className="group bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90 w-full">
+                  <span className="uppercase text-lg">Get a High-Converting Website</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
@@ -523,25 +523,25 @@ export default function WebDesignPage() {
               <div className="grid gap-8 md:grid-cols-2">
                 {[
                   {
-                    icon: <Search className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <Search className="h-10 w-10 text-[#4CAF50]" />,
                     title: "SEO + Conversion Focused",
                     description:
                       "Built to rank & turn visitors into patients. Every element is designed with conversion in mind.",
                   },
                   {
-                    icon: <DollarSign className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <DollarSign className="h-10 w-10 text-[#4CAF50]" />,
                     title: "Best Value for Your Investment",
                     description:
                       "No overpriced, bloated agency fees. Just high-quality websites that deliver real results.",
                   },
                   {
-                    icon: <Smartphone className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <Smartphone className="h-10 w-10 text-[#4CAF50]" />,
                     title: "Mobile-First Approach",
                     description:
                       "Over 70% of visitors will be on their phones. We design for mobile first, then adapt to desktop.",
                   },
                   {
-                    icon: <Shield className="h-10 w-10 text-[#F4A261]" />,
+                    icon: <Shield className="h-10 w-10 text-[#4CAF50]" />,
                     title: "No Contracts. No Risk.",
                     description:
                       "We earn your trust, not force you into contracts. Plus, a 90-day money-back guarantee.",
@@ -560,7 +560,7 @@ export default function WebDesignPage() {
             </div>
 
             <div className="mt-10 text-center">
-              <Button className="bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90" size="lg">
+              <Button className="bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90" size="lg">
                 See Why Dentists Choose Us
               </Button>
             </div>
@@ -641,13 +641,13 @@ export default function WebDesignPage() {
                 {/* Card 1 */}
                 <div className="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all hover:bg-white/10 shadow-md  hover:shadow-lg hover:translate-y-[-2px] text-center">
                   <div className="mb-4 rounded-full bg-white/10 p-4 w-fit mx-auto">
-                    <Smartphone className="h-10 w-10 text-[#F4A261]" />
+                    <Smartphone className="h-10 w-10 text-[#4CAF50]" />
                   </div>
                   <h4 className="mb-3 text-xl font-semibold ">Mobile-First, Responsive Design</h4>
                   <p className="mb-4 text-white/80">
                     Looks flawless on every screen size, from phones to tablets to desktop monitors.
                   </p>
-                  <p className="text-sm font-semibold text-[#F4A261]">
+                  <p className="text-sm font-semibold text-[#4CAF50]">
                     Designed to impress—wherever your patients are searching.
                   </p>
                 </div>
@@ -655,13 +655,13 @@ export default function WebDesignPage() {
                 {/* Card 2 */}
                 <div className="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all hover:bg-white/10 shadow-md  hover:shadow-lg hover:translate-y-[-2px] text-center">
                   <div className="mb-4 rounded-full bg-white/10 p-4 w-fit mx-auto">
-                    <Clock className="h-10 w-10 text-[#F4A261]" />
+                    <Clock className="h-10 w-10 text-[#4CAF50]" />
                   </div>
                   <h4 className="mb-3 text-xl font-semibold ">3-Second Load Time Guarantee</h4>
                   <p className="mb-4 text-white/80">
                     Slow sites lose 40% of visitors. We build yours to load lightning-fast—or we rebuild it for free.
                   </p>
-                  <p className="text-sm font-semibold text-[#F4A261]">
+                  <p className="text-sm font-semibold text-[#4CAF50]">
                     Speed isn't optional. It's the difference between a visit and a bounce.
                   </p>
                 </div>
@@ -766,7 +766,7 @@ export default function WebDesignPage() {
                 {/* Card 1 */}
                 <div className="rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg hover:translate-y-[-2px]">
                   <div className="mb-4 rounded-full bg-[#003366]/10 p-4 w-fit mx-auto">
-                    <svg className="h-10 w-10 text-[#F4A261] " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-10 w-10 text-[#003366] " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -779,14 +779,14 @@ export default function WebDesignPage() {
                   <p className="mb-4 text-[#1D3557] text-center">
                     Your site is protected with medical-grade encryption and privacy controls.
                   </p>
-                  <p className="text-sm text-[#F4A261] text-center">Patient data stays private. Always.</p>
+                  <p className="text-sm font-semibold text-[#003366] text-center">Patient data stays private. Always.</p>
                 </div>
 
                 {/* Card 2 */}
                 <div className="rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg hover:translate-y-[-2px]">
                   <div className="mb-4 rounded-full bg-[#003366]/10 p-4 w-fit mx-auto">
 
-                    <ClipboardList className="h-10 w-10 text-[#F4A261]" />
+                    <ClipboardList className="h-10 w-10 text-[#003366]" />
                   </div>
                   <h4 className="mb-3 text-xl font-semibold text-[#003366] text-center">
                     HIPAA-Compliant Patient Forms
@@ -794,7 +794,7 @@ export default function WebDesignPage() {
                   <p className="mb-4 text-[#1D3557] text-center">
                     Custom forms that collect sensitive info securely and legally.
                   </p>
-                  <p className="text-sm text-[#F4A261] text-center">
+                  <p className="text-sm font-semibold text-[#003366] text-center">
                     Smart design, safe collection. No shortcuts.
                   </p>
                 </div>
@@ -802,7 +802,7 @@ export default function WebDesignPage() {
                 {/* Card 3 */}
                 <div className="rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg hover:translate-y-[-2px]">
                   <div className="mb-4 rounded-full bg-[#003366]/10 p-4 w-fit mx-auto">
-                    <UserRound className="w-10 h-10 text-[#F4A261]" />
+                    <UserRound className="w-10 h-10 text-[#003366]" />
                   </div>
                   <h4 className="mb-3 text-xl font-semibold text-[#003366] text-center">
                     ADA Accessibility Compliance
@@ -810,8 +810,8 @@ export default function WebDesignPage() {
                   <p className="mb-4 text-[#1D3557] text-center">
                     Your website works for everyone, including users with disabilities.
                   </p>
-                  <p className="text-sm text-[#F4A261] text-center">
-                    Compliance that reflects care—for every patient.
+                  <p className="text-sm font-semibold text-[#003366] text-center">
+                   Care-driven compliance for every patient.
                   </p>
                 </div>
               </div>
@@ -846,7 +846,7 @@ export default function WebDesignPage() {
 
 
                   <div className="pt-4">
-                    <Button className="bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90 font-semibold">
+                    <Button className="bg-[#4CAF50] text-white uppercase text-lg hover:bg-[#4CAF50]/90 font-semibold">
                       Need Us Now? We're On It
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
@@ -873,7 +873,7 @@ export default function WebDesignPage() {
                       <p className="text-[#1D3557] mb-4 leading-relaxed">
                         of dental patients say they won't trust a practice with a broken or slow website.
                       </p>
-                      <p className="text-sm font-medium text-[#F4A261] italic">
+                      <p className="text-sm font-medium text-[#4CAF50] italic">
                         We make sure that never happens to yours.
                       </p>
                     </div>
@@ -995,7 +995,7 @@ export default function WebDesignPage() {
 
 
             <div className="mt-10 text-center">
-              <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90" size="lg">
+              <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90 uppercase text-lg" size="lg">
                 Let's Build Your Website
               </Button>
             </div>
@@ -1065,7 +1065,7 @@ export default function WebDesignPage() {
                         className={`rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:w-[calc(50%-4rem)] ${i % 2 === 0 ? "md:text-left" : "md:text-right"
                           }`}
                       >
-                        <h3 className="mb-2 text-xl font-bold text-[#1D3557]">
+                        <h3 className="mb-2 text-xl font-bold text-[#003366]">
                           {step.step}. {step.title}
                         </h3>
                         <p className="text-[#1D3557]">{step.description}</p>
@@ -1080,11 +1080,9 @@ export default function WebDesignPage() {
 
         <VslFinalSection />
 
-        {/* 7️⃣ FAQ Section */}
 
-        <FaqSection faqs={webDesignFaqs} />
 
-          {/* Voice Search Optimization Section */}
+        {/* Voice Search Optimization Section */}
         <section className="py-16 bg-gradient-to-b from-[#f7fafe] to-white">
           <div className="container">
             <div className="mx-auto text-center">
@@ -1159,19 +1157,19 @@ export default function WebDesignPage() {
               {/* Smart Device Icons */}
               <div className="mt-8 flex justify-center gap-12">
                 <div className="flex flex-col items-center w-20 space-y-4">
-             
-                  <Image src={googleAssistant} alt={"icon-google-assistant"} width={100} height={100}/>
-                 
+
+                  <Image src={googleAssistant} alt={"icon-google-assistant"} width={100} height={100} />
+
                   <span className="text-sm text-[#666666]">Google Assistant</span>
                 </div>
 
                 <div className="flex flex-col items-center w-20 space-y-4">
-                   <Image src={alexa} alt={"icon-alexa"} width={100} height={100}/>
+                  <Image src={alexa} alt={"icon-alexa"} width={100} height={100} />
                   <span className="text-sm text-[#666666]">Alexa</span>
                 </div>
 
                 <div className="flex flex-col items-center w-20 space-y-4">
-                  <Image src={siri} alt={"icon-siri"} width={100} height={100}/>
+                  <Image src={siri} alt={"icon-siri"} width={100} height={100} />
                   <span className="text-sm text-[#666666]">Siri</span>
                 </div>
               </div>
@@ -1192,8 +1190,8 @@ export default function WebDesignPage() {
 
                 <div className="mb-8 inline-block rounded-full bg-white/10 px-6 py-3">
                   <div className="flex items-center">
-                    <Shield className="mr-3 h-6 w-6 text-[#F4A261]" />
-                    <span className="text-lg font-bold text-[#F4A261]">90-Day Money-Back Guarantee</span>
+                    <Shield className="mr-3 h-6 w-6 text-[#4CAF50]" />
+                    <span className="text-lg font-bold text-[#4CAF50]">90-Day Money-Back Guarantee</span>
                   </div>
                 </div>
 
@@ -1202,7 +1200,7 @@ export default function WebDesignPage() {
                   visitors into patients.
                 </p>
 
-                <Button className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90 mx-auto" >
+                <Button className="group bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90 mx-auto" >
                   <span>Get a High-Converting Website Now</span>
 
                 </Button>
@@ -1214,12 +1212,17 @@ export default function WebDesignPage() {
             </div>
           </div>
         </section>
+
+        {/* 7️⃣ FAQ Section */}
+
+        <FaqSection faqs={webDesignFaqs} />
+
       </main>
 
       {/* Sticky CTA Bar for Mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
         <div className="container">
-          <Button className="w-full bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90">
+          <Button className="w-full bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90">
             <Rocket className="mr-2 h-5 w-5" />
             <span>Build My Website</span>
           </Button>

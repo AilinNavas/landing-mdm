@@ -34,7 +34,7 @@ const VslFinalSection: FC = () => {
               <div className="flex h-full w-full items-center justify-center">
                 <div className="text-center text-white">
                   {/* Large Play Button */}
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#F4A261] shadow-lg transition-transform hover:scale-110">
+                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/80 shadow-lg transition-transform hover:scale-110">
                     <svg className="h-8 w-8 text-[#1D3557]" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
@@ -58,13 +58,13 @@ const VslFinalSection: FC = () => {
           </div>
 
           {/* Urgency Message */}
-          <p className="mb-8 text-sm md:text-base font-semibold text-red-400">
+          <p className="mb-8 text-sm md:text-base font-semibold text-[#4CAF50] uppercase">
             ⚠️ Only a few free design previews left this month.
           </p>
 
           {/* CTA Button */}
           <Button
-            className="mx-auto bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90 w-full md:w-auto md:min-w-[260px]"
+            className="mx-auto bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90 w-full md:w-auto md:min-w-[260px]"
             size="lg"
             onClick={handleScrollToForm}
           >

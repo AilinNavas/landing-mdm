@@ -19,15 +19,15 @@ const HeroVsl = () => {
   }
 
   return (
-    <section id="hero-vsl" className="relative overflow-hidden bg-white py-20">
+    <section id="hero-vsl" className="relative overflow-hidden bg-white py-20 ">
       <div className="container">
-        <div className="mx-auto">
+        <div className="mx-auto ">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             {/* Left Side - Text Content */}
             <div className="space-y-6">
               <h1 className="text-4xl font-bold leading-tight tracking-tight text-[#1D3557] md:text-5xl lg:text-6xl uppercase">
                 See Your New Dental Website{' '}
-                <span className="text-[#F4A261]">Before You Pay a Dime</span>
+                <span className="text-[#4CAF50]">Before You Pay a Dime</span>
               </h1>
 
               <p className="text-xl text-[#1D3557]">
@@ -49,7 +49,7 @@ const HeroVsl = () => {
 
               <div className="pt-4">
                 <Button
-                  className="group bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90"
+                  className="group text-lg uppercase bg-[#4CAF50] text-white hover:bg-[#4CAF50]/70"
                   size="lg"
                   onClick={scrollToContact}
                 >
@@ -65,7 +65,7 @@ const HeroVsl = () => {
                 <div className="relative aspect-video overflow-hidden rounded-lg bg-[#1D3557] shadow-2xl">
                   <div className="flex h-full w-full items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#F4A261] shadow-lg transition-transform hover:scale-110">
+                      <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/80 shadow-lg transition-transform hover:scale-110">
                         <svg className="h-8 w-8 text-[#1D3557]" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z" />
                         </svg>
