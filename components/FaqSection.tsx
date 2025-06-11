@@ -21,7 +21,7 @@ const FaqSection: FC<FaqSectionProps> = ({ faqs, id }) => {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="group cursor-pointer rounded-lg border p-6 transition-all hover:border-[#F4A261] hover:shadow-md animate-[fadeIn_0.5s_ease-in-out]"
+              className="group cursor-pointer rounded-lg border p-6 transition-all hover:border-[#4CAF50] hover:shadow-md animate-[fadeIn_0.5s_ease-in-out]"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <h3 className="mb-2 flex items-center justify-between text-xl font-bold text-[#1D3557]">

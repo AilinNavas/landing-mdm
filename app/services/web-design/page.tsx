@@ -52,11 +52,11 @@ export default function WebDesignPage() {
           <div className="container relative z-10">
             <div className="mx-auto text-center">
               {/* Enhanced Header */}
-              <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#4CAF50]/10 px-6 py-2">
-                <svg className="h-5 w-5 text-[#4CAF50] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#FFCE1B]/10 px-6 py-2">
+                <svg className="h-5 w-5 text-[#FFCE1B] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-sm font-semibold text-[#4CAF50] uppercase tracking-wide">
+                <span className="text-sm  text-[#FFCE1B] uppercase tracking-wide">
                   Lightning Fast Process
                 </span>
               </div>
@@ -329,15 +329,15 @@ export default function WebDesignPage() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="font-bold uppercase leading-tight tracking-tighter text-4xl md:text-5xl">
+              <h1 className="font-bold uppercase leading-tight tracking-tighter text-4xl md:text-5xl text-center md:text-left">
                 Your Website Should Attract More Patients – <span className="text-[#4CAF50]">Not Just Sit There</span>
               </h1>
-              <p className="text-xl leading-relaxed">
+              <p className="text-xl leading-relaxed text-center md:text-left ">
                 We create high-converting dental websites that look great, load fast, and bring in new patients.
               </p>
 
               {/* Trust Badges */}
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-4 pt-2 justify-center md:justify-start">
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
                   <span className="text-sm font-medium">SEO-Optimized</span>
@@ -352,7 +352,7 @@ export default function WebDesignPage() {
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center md:justify-start">
                 <Button className="group bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90" size="lg">
                   <span className="uppercase text-lg">Get Started Today</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -425,9 +425,9 @@ export default function WebDesignPage() {
               <p className="text-xl leading-relaxed text-[#1D3557]">Choose the right website for your practice</p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 border-2 justify-center">
+            <div className="grid gap-8 md:grid-cols-2 justify-center">
               {/* Single Page Website */}
-              <div className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-md transition-all hover:shadow-lg">
+              <div className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-md transition-all hover:shadow-lg ">
                 <div className="mb-4 flex items-center justify-between">
                   <div className="rounded-full bg-[#1D3557]/10 p-4">
                     <Laptop className="h-10 w-10 text-[#1D3557]" />
@@ -512,7 +512,7 @@ export default function WebDesignPage() {
         {/* 4️⃣ What Makes Us Different Section */}
         <section className="bg-[#1D3557] py-16 text-white">
           <div className="container">
-            <div className="mx-auto mb-12  text-center">
+            <div className="mx-auto mb-12 text-center">
               <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase text-center">
                 Not Just a Website. A Patient-Generating Machine
               </h2>
@@ -811,7 +811,7 @@ export default function WebDesignPage() {
                     Your website works for everyone, including users with disabilities.
                   </p>
                   <p className="text-sm font-semibold text-[#003366] text-center">
-                   Care-driven compliance for every patient.
+                    Care-driven compliance for every patient.
                   </p>
                 </div>
               </div>
@@ -835,17 +835,17 @@ export default function WebDesignPage() {
                 <div className="space-y-6">
 
 
-                  <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase">
-                    If Your Site Breaks, We Fix It—Same Day. Guaranteed
+                  <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase text-center md:text-left">
+                    If Your Site Breaks, We Fix It—Same Day. <span className="text-[#4CAF50]">Guaranteed</span>
                   </h2>
 
-                  <h3 className="text-xl leading-relaxed text-white">
+                  <h3 className="text-xl leading-relaxed text-white text-center md:text-left">
                     No panic. No waiting. Just fast, expert help when it matters most.
                   </h3>
 
 
 
-                  <div className="pt-4">
+                  <div className="pt-4 text-center md:text-left">
                     <Button className="bg-[#4CAF50] text-white uppercase text-lg hover:bg-[#4CAF50]/90 font-semibold">
                       Need Us Now? We're On It
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -1190,7 +1190,7 @@ export default function WebDesignPage() {
 
                 <div className="mb-8 inline-block rounded-full bg-white/10 px-6 py-3">
                   <div className="flex items-center">
-                    <Shield className="mr-3 h-6 w-6 text-[#4CAF50]" />
+                    <Shield className="mr-3 h-6 w-6 text-[#4CAF50] hidden md:block" />
                     <span className="text-lg font-bold text-[#4CAF50]">90-Day Money-Back Guarantee</span>
                   </div>
                 </div>
@@ -1199,12 +1199,12 @@ export default function WebDesignPage() {
                   Join hundreds of successful dental practices with websites that don't just look pretty—they convert
                   visitors into patients.
                 </p>
+                <div className="flex justify-center">
+                  <Button className="group bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90 mx-auto" >
+                    <span>Get a High-Converting Website Now</span>
 
-                <Button className="group bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90 mx-auto" >
-                  <span>Get a High-Converting Website Now</span>
-
-                </Button>
-
+                  </Button>
+                </div>
                 <p className="mt-4 text-sm text-white/70">
                   No contracts. No risk. Just a beautiful website that works as hard as you do.
                 </p>
@@ -1220,11 +1220,11 @@ export default function WebDesignPage() {
       </main>
 
       {/* Sticky CTA Bar for Mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
-        <div className="container">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden ">
+        <div className="container mx-auto flex items-center justify-between px-4">
           <Button className="w-full bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90">
             <Rocket className="mr-2 h-5 w-5" />
-            <span>Build My Website</span>
+            <span className="uppercase text-lg">Build My Website</span>
           </Button>
         </div>
       </div>

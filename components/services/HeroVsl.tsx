@@ -20,23 +20,23 @@ const HeroVsl = () => {
 
   return (
     <section id="hero-vsl" className="relative overflow-hidden bg-white py-20 ">
-      <div className="container">
-        <div className="mx-auto ">
+      <div className="container px-4 sm:px-6 mx-auto">
+        <div className="mx-auto">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             {/* Left Side - Text Content */}
             <div className="space-y-6">
-              <h1 className="text-4xl font-bold leading-tight tracking-tight text-[#1D3557] md:text-5xl lg:text-6xl uppercase">
+              <h1 className="text-4xl font-bold leading-tight tracking-tight text-[#1D3557] md:text-5xl lg:text-6xl uppercase text-center md:text-left">
                 See Your New Dental Website{' '}
                 <span className="text-[#4CAF50]">Before You Pay a Dime</span>
               </h1>
 
-              <p className="text-xl text-[#1D3557]">
+              <p className="text-xl text-[#1D3557] text-center md:text-left">
                 We&apos;ll design a custom homepage and service page for your practice—based on your story, tone, and
                 goals. You only pay if you love it.
               </p>
 
               {/* Bullet Highlights */}
-              <div className="space-y-3">
+              <div className="space-y-3 border-2 border-white">
                 {highlights.map((highlight, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4CAF50]">
@@ -47,6 +47,8 @@ const HeroVsl = () => {
                 ))}
               </div>
 
+
+              <div className='flex justify-center md:justify-start'>
               <div className="pt-4">
                 <Button
                   className="group text-lg uppercase bg-[#4CAF50] text-white hover:bg-[#4CAF50]/70"
@@ -54,15 +56,17 @@ const HeroVsl = () => {
                   onClick={scrollToContact}
                 >
                   <span>Book My Free Design Meeting</span>
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1 hidden md:block" />
                 </Button>
               </div>
+               </div>
             </div>
 
             {/* Right Side - Video Embed */}
-            <div className="order-first md:order-last">
+           
+            <div className="order-first md:order-last pr-3 md:pr-0">
               <div className="relative">
-                <div className="relative aspect-video overflow-hidden rounded-lg bg-[#1D3557] shadow-2xl">
+                <div className="relative aspect-video overflow-hidden rounded-lg bg-[#1D3557] shadow-2xl ">
                   <div className="flex h-full w-full items-center justify-center">
                     <div className="text-center text-white">
                       <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/80 shadow-lg transition-transform hover:scale-110">
@@ -91,9 +95,10 @@ const HeroVsl = () => {
                 </p>
               </div>
             </div>
+            </div>
           </div>
         </div>
-      </div>
+    
     </section>
   )
 }
