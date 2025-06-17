@@ -1,13 +1,14 @@
 
 import { Button } from '@/components/ui/button';
-import { SparklesIcon, ClockIcon, ShieldCheckIcon } from 'lucide-react';
+import { SparklesIcon, ClockIcon, ShieldCheckIcon , ArrowRight} from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function DreamSiteFlow() {
   return (
     <section className="bg-[#F5F5F5] py-20 px-6">
       <div className=" mx-auto">
         <h2
-          className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center "
+          className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center "
         
         >
           Your Dream Website Is Just Minutes Away
@@ -72,9 +73,19 @@ export default function DreamSiteFlow() {
           className="mt-16 text-center"
          
         >
-          <Button className="bg-[#4CAF50] px-6 py-3 hover:bg-[#4CAF50] text-white uppercase transition">
-            Book Your Free Preview
-          </Button>
+              <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: 'spring', stiffness: 250 }}
+                    >
+                        <Button
+                            size="lg"
+                            className=" bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                        >
+                            Get a High-Converting Website
+                            <ArrowRight className="ml-2 h-5 w-5 hidden md:block" />
+                        </Button>
+                    </motion.div>
+
           <p className="mt-3 text-sm text-gray-500">
             No risk. No pressure. Just proof.
           </p>

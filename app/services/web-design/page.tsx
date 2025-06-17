@@ -1,8 +1,5 @@
 'use client'
 import Image from "next/image"
-import googleAssistant from '@/public/icons/1.svg'
-import alexa from '@/public/icons/2.svg'
-import siri from '@/public/icons/3.svg'
 import Link from "next/link"
 import {
   ArrowRight,
@@ -29,12 +26,14 @@ import {
   UserRound
 
 } from "lucide-react"
+import { motion } from "framer-motion"
 import { webDesignFaqs } from "@/app/data/faqs"
 import { Button } from "@/components/ui/button"
 import FaqSection from "@/components/FaqSection"
 import HeroVsl from "@/components/services/HeroVsl"
 import VslFinalSection from "@/components/services/VslFinalSection"
 import LightningProcess from "@/components/services/LightningProcess"
+import PricingWebDesign from "@/components/services/PricingWebDesign"
 
 
 export default function WebDesignPage() {
@@ -56,12 +55,12 @@ export default function WebDesignPage() {
                 <svg className="h-5 w-5 text-[#FFCE1B] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-sm  text-[#FFCE1B] uppercase tracking-wide">
+                <span className="text-sm font-bold text-[#FFCE1B] uppercase tracking-wide">
                   Lightning Fast Process
                 </span>
               </div>
 
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase">
                 From Meeting to Mockup
                 <br />
                 <span className="text-[#4CAF50]">In Just Days, Not Weeks</span>
@@ -243,21 +242,25 @@ export default function WebDesignPage() {
                     </div>
                   </div>
 
-                  <Button
-                    className="group bg-gradient-to-r from-[#1D3557] to-[#2D4A6B] text-white hover:from-[#2D4A6B] hover:to-[#1D3557] mb-4 text-lg px-8 py-4 h-auto shadow-xl hover:shadow-2xl transition-all duration-300"
-                    size="lg"
-                    onClick={() => {
-                      const element = document.getElementById("contact-form")
-                      if (element) {
-                        element.scrollIntoView({ behavior: "smooth" })
-                      }
-                    }}
+
+
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 250 }}
+                    className="my-2"
                   >
-                    <Check className="hidden md:block mr-3 h-6 w-6" />
-                    <span className="hidden md:block uppercase">Book Your Free Preview — No Pressure. No Payment. Just Proof.</span>
+                    <Button
+                      size="lg"
+                      className=" bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                    > <Check className="hidden md:block mr-3 h-6 w-6" />
+                    <span className="hidden md:block">Book Your Free Preview — No Pressure. No Payment. Just Proof.</span>
                     <span className="md:hidden">Book Your Free Preview</span>
-                    <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1 hidden md:block" />
-                  </Button>
+                     
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </motion.div>
+
+
 
                   <p className="text-[#4CAF50] font-semibold text-lg uppercase">See First. Pay Later. </p>
 
@@ -329,8 +332,8 @@ export default function WebDesignPage() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="font-bold uppercase leading-tight tracking-tighter text-4xl md:text-5xl text-center md:text-left">
-                Your Website Should Attract More Patients – <span className="text-[#4CAF50]">Not Just Sit There</span>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase text-center md:text-left">
+                Your Website Should Attract More Patients <span className="text-[#4CAF50]">Not Just Sit There</span>
               </h1>
               <p className="text-xl leading-relaxed text-center md:text-left ">
                 We create high-converting dental websites that look great, load fast, and bring in new patients.
@@ -353,10 +356,24 @@ export default function WebDesignPage() {
               </div>
 
               <div className="pt-4 flex justify-center md:justify-start">
-                <Button className="group bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90" size="lg">
-                  <span className="uppercase text-lg">Get Started Today</span>
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+
+
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: 'spring', stiffness: 250 }}
+                >
+                  <Button
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                  >
+                    GET STARTED TODAY
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </motion.div>
+
+
+
+
               </div>
             </div>
 
@@ -364,9 +381,9 @@ export default function WebDesignPage() {
         </section>
 
         {/* 2️⃣ Why Your Website Matters Section */}
-        <section className="bg-[#F5F5F5] py-16">
+        <section className="bg-white py-16">
           <div className="container">
-            <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">
               Why Your Website Matters
             </h2>
 
@@ -408,112 +425,32 @@ export default function WebDesignPage() {
                   <span className="text-[#4CAF50] font-bold">Solution:</span> We build high-performance websites
                   designed to grow your practice.
                 </p>
-                <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90">
-                  <span>See Our Designs</span>
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Button>
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className=" border-2 border-transparent bg-white bg-gradient-to-r from-white via-white to-white text-[#1D3557] hover:from-[#1D3557]/10 hover:to-[#457B9D]/10 hover:border-[#1D3557] transition-all rounded-md px-6 py-4 uppercase text-lg font-semibold tracking-wide"
+                >
+                  See our designs
+
+                </motion.button>
               </div>
             </div>
           </div>
         </section>
 
         {/* 3️⃣ Web Design Packages Section */}
-        <section className="relative bg-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">Our Web Design Packages</h2>
-              <p className="text-xl leading-relaxed text-[#1D3557]">Choose the right website for your practice</p>
-            </div>
 
-            <div className="grid gap-8 md:grid-cols-2 justify-center">
-              {/* Single Page Website */}
-              <div className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-md transition-all hover:shadow-lg ">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="rounded-full bg-[#1D3557]/10 p-4">
-                    <Laptop className="h-10 w-10 text-[#1D3557]" />
-                  </div>
-                  <div className="rounded-full bg-[#003366]/10 px-4 py-2 text-sm font-medium text-[#003366]">
-                    Ready in 10 Days
-                  </div>
-                </div>
+        <PricingWebDesign />
 
-                <h3 className="mb-2 text-2xl font-bold text-[#003366] uppercase">1. Single Page Website</h3>
-                <div className="mb-4 text-3xl font-bold text-[#4CAF50]">$1,247</div>
-                <p className="mb-6 text-[#1D3557]">
-                  Perfect for new practices or those who need a strong online presence FAST.
-                </p>
-
-                <div className="mb-6 flex-1 space-y-3">
-                  {[
-                    "All Essential Sections (Services, About, Contact, Reviews)",
-                    "Mobile-Friendly & SEO-Optimized",
-                    "Blazing-Fast Speed & Security",
-                    "Call-to-Action Strategy to Convert Visitors into Patients",
-                    "Custom Domain Setup",
-                    "Basic Analytics Integration",
-                  ].map((feature, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#4CAF50]" />
-                      <span className="text-[#1D3557]">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button className="group bg-[#1D3557] hover:bg-[#1D3557]/90 w-full">
-                  <span className="uppercase text-lg">Get My Website in 10 Days</span>
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
-
-              {/* Traditional Multi-Page Website */}
-              <div className="flex flex-col rounded-lg border-2 border-[#4CAF50] bg-white p-6 shadow-lg transition-all hover:shadow-xl">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="rounded-full bg-[#4CAF50]/10 p-4">
-                    <Globe className="h-10 w-10 text-[#4CAF50]" />
-                  </div>
-                  <div className="rounded-full bg-[#4CAF50]/10 px-4 py-2 text-sm font-medium text-[#4CAF50]">
-                    Most Popular
-                  </div>
-                </div>
-
-                <h3 className="mb-2 text-2xl font-bold text-[#003366] uppercase">2. Traditional Multi-Page Website</h3>
-                <div className="mb-4 text-3xl font-bold text-[#4CAF50]">$4,497</div>
-                <p className="mb-6 text-[#1D3557]">
-                  For practices that want a premium website optimized for SEO & conversions.
-                </p>
-
-                <div className="mb-6 flex-1 space-y-3">
-                  {[
-                    "Unlimited Service Pages (Realistically up to 25)",
-                    "SEO-Optimized Structure for Higher Google Rankings",
-                    "Custom Design Tailored to Your Brand",
-                    "Patient Forms, Blog, & Lead Capture Features",
-                    "Full Conversion Strategy Built In",
-                    "Advanced Analytics & Tracking",
-                    "Content Management System",
-                    "Ongoing Technical Support",
-                  ].map((feature, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#4CAF50]" />
-                      <span className="text-[#1D3557]">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button className="group bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90 w-full">
-                  <span className="uppercase text-lg">Get a High-Converting Website</span>
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 4️⃣ What Makes Us Different Section */}
+
+
+
         <section className="bg-[#1D3557] py-16 text-white">
           <div className="container">
             <div className="mx-auto mb-12 text-center">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase text-center">
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase text-center">
                 Not Just a Website. A Patient-Generating Machine
               </h2>
               <p className="text-xl leading-relaxed">What makes our web design services different.</p>
@@ -560,9 +497,14 @@ export default function WebDesignPage() {
             </div>
 
             <div className="mt-10 text-center">
-              <Button className="bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90" size="lg">
-                See Why Dentists Choose Us
-              </Button>
+             <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className=" border-2 border-transparent bg-gradient-to-r text-WHITE hover:from-[#1D3557]/10 hover:to-[#457B9D]/10 hover:border-white transition-all rounded-md px-6 py-4 uppercase text-lg font-semibold tracking-wide"
+                >
+                  SEE WHY DENTISTS CHOOSE US
+
+                </motion.button>
             </div>
           </div>
         </section>
@@ -572,7 +514,7 @@ export default function WebDesignPage() {
         <section className="bg-[#f9f9f9] py-20">
           <div className="container">
             <div className="mx-auto text-center mb-12">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">Performance That Pays for Itself</h2>
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">Performance That Pays for Itself</h2>
               <h3 className="text-xl leading-relaxed text-[#1D3557]">
                 Smart features that turn your website into your #1 patient generator.
               </h3>
@@ -629,7 +571,7 @@ export default function WebDesignPage() {
         <section className="bg-[#1D3557] text-white py-20">
           <div className="container">
             <div className="mx-auto  text-center mb-12">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold leading-tight uppercase text-center">Built for Today's Patient Journey</h2>
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold leading-tight uppercase text-center">Built for Today's Patient Journey</h2>
               <h3 className="text-xl leading-relaxed]">
                 Mobile-first. Lightning-fast. Built to convert from the first tap.
               </h3>
@@ -671,10 +613,10 @@ export default function WebDesignPage() {
         </section>
 
         {/* NUEVA SECCIÓN: Change Is Free. And Effortless. */}
-        <section className="bg-[#f9f9f9] py-20">
+        <section className="bg-white py-20">
           <div className="container">
             <div className="mx-auto  text-center mb-12">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">Change Is Free. And Effortless.</h2>
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">Change Is Free. And Effortless.</h2>
               <h3 className="text-xl leading-relaxed text-[#1D3557]">
                 Unlimited updates, pages, and revisions.
               </h3>
@@ -684,7 +626,7 @@ export default function WebDesignPage() {
             <div className="mx-auto max-w-6xl">
               <div className="grid gap-8 md:grid-cols-3">
                 {/* Card 1 */}
-                <div className="rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-md hover:translate-y-[-2px]">
+                <div className="rounded-2xl bg-white p-6 transition-all shadow-md hover:translate-y-[-2px]">
                   <div className="mb-4 rounded-full bg-[#4CAF50]/10 p-4 w-fit mx-auto">
                     <svg className="h-10 w-10 text-[#4CAF50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
@@ -705,7 +647,7 @@ export default function WebDesignPage() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-md hover:translate-y-[-2px]">
+                <div className="rounded-2xl bg-white p-6  transition-all shadow-md hover:translate-y-[-2px]">
                   <div className="mb-4 rounded-full bg-[#4CAF50]/10 p-4 w-fit mx-auto">
                     <svg className="h-10 w-10 text-[#4CAF50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
@@ -726,7 +668,7 @@ export default function WebDesignPage() {
                 </div>
 
                 {/* Card 3 */}
-                <div className="rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-md hover:translate-y-[-2px]">
+                <div className="rounded-2xl bg-white p-6  transition-all shadow-md hover:translate-y-[-2px]">
                   <div className="mb-4 rounded-full bg-[#4CAF50]/10 p-4 w-fit mx-auto">
                     <svg className="h-10 w-10 text-[#4CAF50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
@@ -749,10 +691,10 @@ export default function WebDesignPage() {
         </section>
 
         {/* NUEVA SECCIÓN: Peace of Mind, Built In */}
-        <section className="bg-white py-20">
+        <section className="bg-[#f9f9f9] py-20">
           <div className="container">
             <div className="mx-auto  text-center mb-12">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">
                 No Lawsuits. No Loopholes
               </h2>
               <h3 className="text-xl leading-relaxed text-[#1D3557]">
@@ -835,7 +777,7 @@ export default function WebDesignPage() {
                 <div className="space-y-6">
 
 
-                  <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase text-center md:text-left">
+                  <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase text-center md:text-left">
                     If Your Site Breaks, We Fix It—Same Day. <span className="text-[#4CAF50]">Guaranteed</span>
                   </h2>
 
@@ -846,10 +788,19 @@ export default function WebDesignPage() {
 
 
                   <div className="pt-4 text-center md:text-left">
-                    <Button className="bg-[#4CAF50] text-white uppercase text-lg hover:bg-[#4CAF50]/90 font-semibold">
-                      Need Us Now? We're On It
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: 'spring', stiffness: 250 }}
+                    >
+                      <Button
+                        size="lg"
+                        className=" bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                      >
+                        NEED US NOW? WE'RE ON IT
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </motion.div>
+
                   </div>
                 </div>
 
@@ -905,7 +856,7 @@ export default function WebDesignPage() {
         <section className="bg-white py-16">
           <div className="container">
             <div className="mx-auto mb-12 text-center">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">
                 Before & After: The Transformation
               </h2>
               <p className="text-xl leading-relaxed text-[#1D3557]">See the difference a high-converting website makes.</p>
@@ -995,88 +946,23 @@ export default function WebDesignPage() {
 
 
             <div className="mt-10 text-center">
-              <Button className="bg-[#1D3557] hover:bg-[#1D3557]/90 uppercase text-lg" size="lg">
-                Let's Build Your Website
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* 6️⃣ Our Process Section */}
-        <section className="bg-[#F5F5F5] py-16">
-          <div className="container">
-            <div className="mx-auto mb-12 text-center">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">
-                Our Website Design Process
-              </h2>
-              <p className="text-xl leading-relaxed text-[#1D3557]">Simple, transparent, and focused on results.</p>
-            </div>
-
-            <div className="relative mx-auto max-w-4xl">
-              <div className="absolute left-[50%] top-0 bottom-0 hidden w-0.5 -translate-x-1/2 bg-[#1D3557]/20 md:block"></div>
-
-              <div className="space-y-12">
-                {[
-                  {
-                    step: "1",
-                    title: "Discovery",
-                    description:
-                      "We learn about your practice, your patients, and your goals to create a website strategy that aligns with your business objectives.",
-                    icon: <Search className="h-6 w-6 text-white" />,
-                  },
-                  {
-                    step: "2",
-                    title: "Design",
-                    description:
-                      "Our designers create a custom mockup of your website, focusing on both aesthetics and conversion optimization.",
-                    icon: <Laptop className="h-6 w-6 text-white" />,
-                  },
-                  {
-                    step: "3",
-                    title: "Development",
-                    description:
-                      "We build your website with clean code, optimized for speed, security, and search engines.",
-                    icon: <Code className="h-6 w-6 text-white" />,
-                  },
-                  {
-                    step: "4",
-                    title: "Launch",
-                    description:
-                      "After thorough testing, we launch your new website and provide training on how to use it effectively.",
-                    icon: <Rocket className="h-6 w-6 text-white" />,
-                  },
-                  {
-                    step: "5",
-                    title: "Growth",
-                    description:
-                      "We monitor performance and make ongoing optimizations to ensure your website continues to attract and convert patients.",
-                    icon: <BarChart className="h-6 w-6 text-white" />,
-                  },
-                ].map((step, i) => (
-                  <div key={i} className="relative">
-                    <div
-                      className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                        } items-center gap-8`}
+             <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: 'spring', stiffness: 250 }}
                     >
-                      <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-[#1D3557] text-xl font-bold text-white shadow-lg md:mx-8">
-                        {step.icon}
-                      </div>
-                      <div
-                        className={`rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:w-[calc(50%-4rem)] ${i % 2 === 0 ? "md:text-left" : "md:text-right"
-                          }`}
-                      >
-                        <h3 className="mb-2 text-xl font-bold text-[#003366]">
-                          {step.step}. {step.title}
-                        </h3>
-                        <p className="text-[#1D3557]">{step.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                        <Button
+                            size="lg"
+                            className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                        >
+                           LET'S BUILD YOUR WEBSITE
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                    </motion.div>
             </div>
           </div>
         </section>
+
+
 
         <VslFinalSection />
 
@@ -1143,7 +1029,7 @@ export default function WebDesignPage() {
                 </div>
               </div>
 
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-[#1D3557] leading-tight uppercase text-center">Optimized for Alexa, Google Assistant and siri</h2>
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">Optimized for Alexa, Google Assistant and siri</h2>
               <h3 className="text-xl leading-relaxed text-[#1D3557] pb-6">Ready for the Future of Search.</h3>
 
               <p className="mb-6 text-lg text-[#1D3557] leading-relaxed">
@@ -1155,7 +1041,7 @@ export default function WebDesignPage() {
               <p className="text-[#4CAF50] text-xl font-bold uppercase">Be the answer they hear first.</p>
 
               {/* Smart Device Icons */}
-              <div className="mt-8 flex justify-center gap-12">
+              {/* <div className="mt-8 flex justify-center gap-12">
                 <div className="flex flex-col items-center w-20 space-y-4">
 
                   <Image src={googleAssistant} alt={"icon-google-assistant"} width={100} height={100} />
@@ -1172,7 +1058,7 @@ export default function WebDesignPage() {
                   <Image src={siri} alt={"icon-siri"} width={100} height={100} />
                   <span className="text-sm text-[#666666]">Siri</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -1184,7 +1070,7 @@ export default function WebDesignPage() {
           <div className="container">
             <div className="mx-auto rounded-lg border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
               <div className="text-center">
-                <h2 className="mb-6 text-3xl font-bold uppercase md:text-4xl">
+                <h2 className="mb-6 text-3xl font-extrabold uppercase md:text-4xl">
                   Ready for a Website That Actually Brings You Patients?
                 </h2>
 
@@ -1200,10 +1086,19 @@ export default function WebDesignPage() {
                   visitors into patients.
                 </p>
                 <div className="flex justify-center">
-                  <Button className="group bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90 mx-auto" >
-                    <span>Get a High-Converting Website Now</span>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 250 }}
+                  >
+                    <Button
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                    >
+                      Start Converting Now
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </motion.div>
 
-                  </Button>
                 </div>
                 <p className="mt-4 text-sm text-white/70">
                   No contracts. No risk. Just a beautiful website that works as hard as you do.
@@ -1222,7 +1117,7 @@ export default function WebDesignPage() {
       {/* Sticky CTA Bar for Mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden ">
         <div className="container mx-auto flex items-center justify-between px-4">
-          <Button className="w-full bg-[#4CAF50] text-white hover:bg-[#4CAF50]/90">
+          <Button className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide">
             <Rocket className="mr-2 h-5 w-5" />
             <span className="uppercase text-lg">Build My Website</span>
           </Button>

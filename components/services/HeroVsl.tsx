@@ -2,6 +2,7 @@
 
 import { Check, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
 
 const HeroVsl = () => {
   const highlights = [
@@ -25,7 +26,7 @@ const HeroVsl = () => {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             {/* Left Side - Text Content */}
             <div className="space-y-6">
-              <h1 className="text-4xl font-bold leading-tight tracking-tight text-[#1D3557] md:text-5xl lg:text-6xl uppercase text-center md:text-left">
+              <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#1D3557] md:text-5xl lg:text-6xl uppercase text-center md:text-left">
                 See Your New Dental Website{' '}
                 <span className="text-[#4CAF50]">Before You Pay a Dime</span>
               </h1>
@@ -49,21 +50,35 @@ const HeroVsl = () => {
 
 
               <div className='flex justify-center md:justify-start'>
-              <div className="pt-4">
-                <Button
+                <div className="pt-4">
+                  {/* <Button
                   className="group text-lg uppercase bg-[#4CAF50] text-white hover:bg-[#4CAF50]/70"
                   size="lg"
                   onClick={scrollToContact}
                 >
                   <span>Book My Free Design Meeting</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1 hidden md:block" />
-                </Button>
+                </Button> */}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 250 }}
+                  >
+                    <Button
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                    >
+                    Book My Free Design Meeting
+                      <ArrowRight className="ml-2 h-5 w-5 hidden md:block" />
+                    </Button>
+                  </motion.div>
+
+
+                </div>
               </div>
-               </div>
             </div>
 
             {/* Right Side - Video Embed */}
-           
+
             <div className="order-first md:order-last pr-3 md:pr-0">
               <div className="relative">
                 <div className="relative aspect-video overflow-hidden rounded-lg bg-[#1D3557] shadow-2xl ">
@@ -95,10 +110,10 @@ const HeroVsl = () => {
                 </p>
               </div>
             </div>
-            </div>
           </div>
         </div>
-    
+      </div>
+
     </section>
   )
 }

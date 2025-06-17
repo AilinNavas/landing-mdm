@@ -4,6 +4,8 @@
 
 import { FC } from "react"
 import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 const VslFinalSection: FC = () => {
   const handleScrollToForm = () => {
@@ -20,7 +22,7 @@ const VslFinalSection: FC = () => {
         <div className="mx-auto max-w-4xl text-center">
         
             <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight uppercase text-center">
+              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase text-center">
                  STILL THINKING ABOUT IT?
               </h2>
               <p className="text-xl leading-relaxed">See exactly what you&apos;ll get — before you ever pay.</p>
@@ -63,13 +65,19 @@ const VslFinalSection: FC = () => {
           </p>
 
           {/* CTA Button */}
-          <Button
-            className="mx-auto bg-[#4CAF50] text-white uppercase hover:bg-[#4CAF50]/90 w-full md:w-auto md:min-w-[260px]"
-            size="lg"
-            onClick={handleScrollToForm}
-          >
-             Reserve My Free Homepage Preview
-          </Button>
+           <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: 'spring', stiffness: 250 }}
+                    >
+                        <Button
+                            size="lg"
+                            className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                        >
+                            RESERVE MY FREE PREVIEW
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                    </motion.div>
+
         </div>
       </div>
     </section>
