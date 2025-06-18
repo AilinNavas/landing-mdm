@@ -81,7 +81,7 @@ export default function DreamSiteFlow() {
                             size="lg"
                             className=" bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                         >
-                            Get a High-Converting Website
+                            Get a Website
                             <ArrowRight className="ml-2 h-5 w-5 hidden md:block" />
                         </Button>
                     </motion.div>

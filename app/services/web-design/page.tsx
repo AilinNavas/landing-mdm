@@ -254,9 +254,9 @@ export default function WebDesignPage() {
                       className=" bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                     > <Check className="hidden md:block mr-3 h-6 w-6" />
                     <span className="hidden md:block">Book Your Free Preview — No Pressure. No Payment. Just Proof.</span>
-                    <span className="md:hidden">Book Your Free Preview</span>
+                    <span className="md:hidden">Book Your Preview</span>
                      
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                      <ArrowRight className="ml-2 h-5 w-5 hidden md:block" />
                     </Button>
                   </motion.div>
 
@@ -1039,26 +1039,6 @@ export default function WebDesignPage() {
               </p>
 
               <p className="text-[#4CAF50] text-xl font-bold uppercase">Be the answer they hear first.</p>
-
-              {/* Smart Device Icons */}
-              {/* <div className="mt-8 flex justify-center gap-12">
-                <div className="flex flex-col items-center w-20 space-y-4">
-
-                  <Image src={googleAssistant} alt={"icon-google-assistant"} width={100} height={100} />
-
-                  <span className="text-sm text-[#666666]">Google Assistant</span>
-                </div>
-
-                <div className="flex flex-col items-center w-20 space-y-4">
-                  <Image src={alexa} alt={"icon-alexa"} width={100} height={100} />
-                  <span className="text-sm text-[#666666]">Alexa</span>
-                </div>
-
-                <div className="flex flex-col items-center w-20 space-y-4">
-                  <Image src={siri} alt={"icon-siri"} width={100} height={100} />
-                  <span className="text-sm text-[#666666]">Siri</span>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
@@ -1115,14 +1095,14 @@ export default function WebDesignPage() {
       </main>
 
       {/* Sticky CTA Bar for Mobile */}
-      {/* <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden border-2 border-red-600">
+       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden border-2 border-red-600">
         <div className="container mx-auto flex items-center justify-between px-4">
           <Button className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide">
             <Rocket className="mr-2 h-5 w-5" />
             <span className="uppercase text-lg">Build My Website</span>
           </Button>
         </div>
-      </div> */}
+      </div> 
 
 
     </div>
