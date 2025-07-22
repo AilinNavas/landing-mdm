@@ -86,7 +86,7 @@ export default function DreamSiteFlow() {
                         </Button>
                     </motion.div>
 
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-3">
             No risk. No pressure. Just proof.
           </p>
         </div>

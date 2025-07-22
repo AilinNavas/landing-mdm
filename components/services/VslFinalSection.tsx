@@ -20,42 +20,29 @@ const VslFinalSection: FC = () => {
     <section className="bg-[#1D3557] py-20 px-4 md:px-8 lg:px-20 text-white">
       <div className="container">
         <div className="mx-auto max-w-4xl text-center">
-        
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase text-center">
-                 STILL THINKING ABOUT IT?
-              </h2>
-              <p className="text-xl leading-relaxed">See exactly what you&apos;ll get — before you ever pay.</p>
-            </div>
+
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase text-center">
+              STILL THINKING ABOUT IT?
+            </h2>
+            <p className="text-xl leading-relaxed">See exactly what you&apos;ll get — before you ever pay.</p>
+          </div>
 
 
           {/* Video Container */}
           <div className="mt-10 mb-8 aspect-video max-w-4xl mx-auto">
             <div className="relative h-full w-full overflow-hidden rounded-lg bg-[#0F2540] shadow-lg">
-              {/* Placeholder for VSL - Replace with actual video embed */}
-              <div className="flex h-full w-full items-center justify-center">
-                <div className="text-center text-white">
-                  {/* Large Play Button */}
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/80 shadow-lg transition-transform hover:scale-110">
-                    <svg className="h-8 w-8 text-[#1D3557]" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-lg font-medium">Watch Our Process</p>
-                </div>
+
+              <div className="relative w-full aspect-video rounded-md overflow-hidden shadow-lg">
+
+                <iframe
+                  src="https://www.canva.com/design/DAGsm90S8zY/wYVdgERxYXD8L3VgbkQjfQ/watch?embed"
+                  title="Canva Video"
+                  className="w-full h-full rounded-md"
+                  allowFullScreen
+                ></iframe>
               </div>
 
-              {/* Reemplaza el contenido de arriba por un iframe si se desea: */}
-              {/*
-              <iframe
-                className="h-full w-full"
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                title="Our Website Design Process"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              */}
             </div>
           </div>
 
@@ -65,18 +52,18 @@ const VslFinalSection: FC = () => {
           </p>
 
           {/* CTA Button */}
-           <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ type: 'spring', stiffness: 250 }}
-                    >
-                        <Button
-                            size="lg"
-                            className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
-                        >
-                            RESERVE MY FREE PREVIEW
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                    </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 250 }}
+          >
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+            >
+              RESERVE MY FREE PREVIEW
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </motion.div>
 
         </div>
       </div>

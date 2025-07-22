@@ -92,4 +92,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
+button {
+  text-transform: uppercase;
+  font-weight: 500;
+}

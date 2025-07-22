@@ -102,7 +102,7 @@ export default function Navbar() {
                             key={link.href}
                             href={link.href}
                             onClick={() => handleNavClick(link.href)}
-                            className={`relative text-[#1D3557] hover:text-[#1D3557]/80 transition-colors ${isActive(link.href) ? 'font-medium' : ''
+                            className={`relative uppercase font-medium text-[#1D3557] hover:text-[#1D3557]/80 transition-colors ${isActive(link.href) ? 'font-medium' : ''
                                 }`}
                         >
                             {link.label}
@@ -171,7 +171,7 @@ export default function Navbar() {
                                                 key={s.href}
                                                 href={s.href}
                                                 onClick={() => setIsOpen(false)}
-                                                className="text-sm text-[#1D3557] py-1 hover:text-[#1D3557]/80 transition-colors"
+                                                className="text-sm text-[#1D3557] uppercase py-1 hover:text-[#1D3557]/80 transition-colors"
                                             >
                                                 {s.label}
                                             </Link>
@@ -196,7 +196,7 @@ export default function Navbar() {
                             ))}
 
                             <Button
-                                className="w-full bg-[#F4A261] text-[#1D3557] hover:bg-[#F4A261]/90 mt-2"
+                                className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide mt-2"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Contact Us
