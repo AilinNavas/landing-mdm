@@ -305,7 +305,7 @@ export default function WebDesignPricing() {
               {/* CTA */}
               <div className="mt-8 text-center">
                 <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide" size="lg">
-                  <span>Get Your Custom Website Design</span>
+                  <span>Get Your Design</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <p className="mt-3 text-sm text-[#1D3557]/70">
