@@ -29,14 +29,9 @@ const FAQAccordion = () => {
           answer:
             "No catch. We believe in earning your trust before asking for a dime. You'll see a fully designed homepage and service page first. If you love it, we move forward. If not, you walk away—no pressure, no payment.",
         },
+        
         {
           id: "pricing-3",
-          question: "Do you offer payment plans?",
-          answer:
-            "Yes. We can split the $3,497 into two or three scheduled payments. Just let us know what works best, and we'll make it stress-free.",
-        },
-        {
-          id: "pricing-4",
           question: "What if I change my mind after paying?",
           answer:
             "You're covered by our 90-Day Money-Back Guarantee. If you're not satisfied for any reason within 90 days after launch, we'll refund you in full. No questions asked.",
@@ -260,7 +255,7 @@ const FAQAccordion = () => {
               We're here to help. Book a free consultation and get all your questions answered.
             </p>
             <motion.button
-              className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg font-semibold uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg"
+              className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg font-semibold uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
