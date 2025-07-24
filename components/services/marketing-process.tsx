@@ -85,10 +85,10 @@ export default function MarketingProcess() {
                   <h3 className="text-2xl font-bold text-[#1D3557] mb-4 leading-tight">
                     {step.title}
                   </h3>
-                  <p className="text-[#1D3557] leading-relaxed mb-3 font-medium">
+                  <p className="text-[#1D3557] leading-relaxed mb-4 font-medium">
                     {step.description}
                   </p>
-                  <p className="text-[#1D3557]/80 leading-relaxed text-sm">
+                  <p className="text-[#1D3557]/80 leading-relaxed text-sm italic">
                     {step.subtitle}
                   </p>
                 </div>

@@ -159,7 +159,7 @@ const FAQAccordion = () => {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F5F5F5]">
       <div className="container px-4 sm:px-6 mx-auto max-w-5xl">
         {/* Header */}
         <motion.div
