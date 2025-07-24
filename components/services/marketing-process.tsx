@@ -32,10 +32,10 @@ export default function MarketingProcess() {
   ]
 
   return (
-    <section className="bg-[#F5F5F5] py-20 px-6 relative overflow-hidden">
+    <section className="bg-[#F5F5F5] py-20 relative overflow-hidden">
 
 
-      <div className="container mx-auto relative z-10">
+      <div className="container  px-4 sm:px-6 mx-auto max-w-5xl relative z-10">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
