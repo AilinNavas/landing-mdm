@@ -15,8 +15,8 @@ export default function MarketingProcess() {
     },
     {
       icon: EyeIcon,
-      title: "See Your Draft",
-      description: "We design a homepage + service page — 100% custom.",
+      title: "See Your Design",
+      description: "We design a homepage — 100% custom.",
       subtitle: "You'll preview everything in a private review session, for free.",
       number: "02",
       delay: 0.4
@@ -120,7 +120,7 @@ export default function MarketingProcess() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center"
-              > Book Your Free Preview
+              > Free Web Design Preview
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

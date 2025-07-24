@@ -97,7 +97,7 @@ export default function WebDesignPage() {
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
                   <Check className="h-5 w-5 text-[#4CAF50]" />
-                  <span className="text-sm font-medium">No Contracts</span>
+                  <span className="text-sm font-medium">Fast-Loading</span>
                 </div>
               </div>
 
@@ -116,10 +116,13 @@ export default function WebDesignPage() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center"
                   >
-                      GET STARTED TODAY
+                      Free Web Design Preview
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>
+                  <p className="text-xs text-white mt-3 text-center">
+                   No credit card required • Risk-free
+                  </p>
                 </motion.div>
               </div>
             </div>
@@ -174,7 +177,7 @@ export default function WebDesignPage() {
                     <div className="absolute -bottom-2 left-1/2 h-2 w-full -translate-x-1/2 rounded-full bg-black/10 blur-sm"></div>
                   </div>
 
-                  <div className="space-y-2 flex flex-col items-start md:items-center">
+                  <div className="space-y-2 flex flex-col items-start md:items-left">
                     <div className="flex items-center">
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Outdated design</span>
@@ -238,7 +241,7 @@ export default function WebDesignPage() {
                     <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-[#4CAF50]/20 to-transparent blur-xl -z-10"></div>
                   </div>
 
-                  <div className="space-y-2 flex flex-col items-start md:items-center">
+                  <div className="space-y-2 flex flex-col items-start md:items-left">
 
                     <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
@@ -279,10 +282,14 @@ export default function WebDesignPage() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center"
                 >
-                    LET'S BUILD YOUR WEBSITE
+                    Free Web Design Preview
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
+                  
                 </Button>
+                <p className="text-xs text-[#1D3557]/50 mt-3 text-center">
+                   No credit card required • 90-day money-back guarantee
+                </p>
               </motion.div>
             </div>
           </div>

@@ -99,7 +99,7 @@ export default function DreamSiteFlow() {
               transition={{ type: 'spring', stiffness: 250 }}
             >
               <Button
-                size="lg"
+            
                 className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                 asChild
               ><a
@@ -108,8 +108,8 @@ export default function DreamSiteFlow() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center"
               >
-                  Get a Website
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Free Web Design Preview
+                  <ArrowRight className="ml-1 h-5 w-5" />
                 </a>
               </Button>
             </motion.div>

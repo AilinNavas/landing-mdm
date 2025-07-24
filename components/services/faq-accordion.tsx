@@ -27,7 +27,7 @@ const FAQAccordion = () => {
           id: "pricing-2",
           question: "Why do I only pay after seeing the draft? What's the catch?",
           answer:
-            "No catch. We believe in earning your trust before asking for a dime. You'll see a fully designed homepage and service page first. If you love it, we move forward. If not, you walk away—no pressure, no payment.",
+            "No catch. We believe in earning your trust before asking for a dime. You'll see a fully designed homepage first. If you love it, we move forward. If not, you walk away—no pressure, no payment.",
         },
 
         {
@@ -53,7 +53,7 @@ const FAQAccordion = () => {
           id: "time-2",
           question: "How fast can you complete my website?",
           answer:
-            "Most sites go from first meeting to launch in about 3 weeks. If you're in a hurry, we can often fast-track it—just let us know during our initial meeting.",
+            "Most sites go from first meeting to launch in 10 days. If you're in a hurry, we can often fast-track it—just let us know during our initial meeting.",
         },
       ],
     },
@@ -66,13 +66,13 @@ const FAQAccordion = () => {
           id: "trust-1",
           question: "How do I know you're legit? Can I see examples?",
           answer:
-            "Absolutely. We've worked with dentists across the U.S. and can show you real sites we've launched. We also avoid sales pressure—what you see is what you get.",
+            "Absolutely. We can show you other sites we've designed. We also avoid sales pressure—what you see is what you get.",
         },
         {
           id: "trust-2",
           question: "What if my new site doesn't bring in new patients?",
           answer:
-            "Our sites are built for growth, not just looks. We use proven conversion strategies, advanced SEO, and lead capture features to turn visitors into appointments. You'll even get analytics that show how many patients your site is generating.",
+            "Our sites are built for growth, not just looks. We use proven conversion strategies, advanced SEO, and lead capture features to turn visitors into appointments.",
         },
         {
           id: "trust-3",
@@ -91,7 +91,7 @@ const FAQAccordion = () => {
           id: "offer-1",
           question: "What's included in the website?",
           answer:
-            "Everything: Custom design, on-brand content, unlimited service pages, blog setup, lead forms, local SEO, ADA & HIPAA compliance, mobile optimization, voice search readiness, and more. No page limits. No hidden fees.",
+            "Everything: Custom design, on-brand content, blog setup, lead forms, local SEO, ADA & HIPAA compliance, mobile optimization, voice search readiness, and more. No hidden fees.",
         },
         {
           id: "offer-2",
@@ -116,13 +116,13 @@ const FAQAccordion = () => {
           id: "technical-1",
           question: "Is this HIPAA-compliant?",
           answer:
-            "Yes. Your hosting, patient forms, and data handling all follow strict HIPAA guidelines. We bake this in from day one so you're fully protected.",
+            "Yes. Your patient forms follow HIPAA guidelines. We bake this in from day one so you're fully protected.",
         },
         {
           id: "technical-2",
           question: "What happens after launch? Will I be able to make updates?",
           answer:
-            "Yes. You can make simple updates yourself, or request unlimited updates from our team for the first 12 months—free of charge.",
+            "Yes. You can request unlimited updates from our team for the first 90 days—free of charge.",
         },
         {
           id: "technical-3",
@@ -141,7 +141,7 @@ const FAQAccordion = () => {
           id: "flexibility-1",
           question: "Can I request changes after the site goes live?",
           answer:
-            "Absolutely. You get unlimited updates for the first 12 months, and we offer ongoing support afterward too. Need to tweak copy or add a new service? Just ask.",
+            "Absolutely. You get unlimited updates for the first 90 days, and we offer ongoing support afterward too. Need to tweak copy or add a new service? Just ask.",
         },
         {
           id: "flexibility-2",
@@ -264,7 +264,7 @@ const FAQAccordion = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center"
             >
-                Book Free Consultation
+              Free Web Design Preview
               </a>
             </motion.button>
           </div>

@@ -1,14 +1,14 @@
 "use client"
-import { Check, ArrowRight } from 'lucide-react'
+import { Check, ArrowRight, VideoIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 const HeroVslRedesigned = () => {
   const highlights = [
-    "No contracts. No commitments.",
-    "100% custom design based on your brand",
-    "HIPAA-compliant forms & SEO-optimized",
-    "Real results, risk-free",
+    "Optimized for local SEO",
+    "HIPAA-compliant forms",
+    "100% custom design",
+    "Mobile-friendly",
   ]
 
 
@@ -49,8 +49,8 @@ const HeroVslRedesigned = () => {
                 See Your New Dental Website <span className="text-[#4CAF50]">Before You Pay a Dime</span>
               </motion.h1>
               <motion.p className="text-xl text-white text-center md:text-left" variants={itemVariants}>
-                We&apos;ll design a custom homepage and service page for your practice—based on your story, tone, and
-                goals. You only pay if you love it.
+                We&apos;ll design a custom homepage for your practice—based on your story, tone, and
+                goals. <span className='underline decoration-[#4CAF50] underline-offset-8 '>You only pay if you love it.</span>
               </motion.p>
               <motion.div className="space-y-3" variants={itemVariants}>
                 {highlights.map((highlight, i) => (
@@ -137,18 +137,19 @@ const HeroVslRedesigned = () => {
                   >
                     <div className="flex flex-col items-center space-y-2 justify-center">
                       <h4 className="flex items-center text-white font-semibold text-lg">
-                        <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {/* <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                           />
-                        </svg>
-                        Meet
+                        </svg> */}
+                        <VideoIcon className="w-6 h-6 mr-3 text-white" />
+                        Meeting 
                       </h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        30-min call. No pressure.
+                        Tell us your story.
                       </p>
                     </div>
                   </motion.div>
@@ -162,7 +163,7 @@ const HeroVslRedesigned = () => {
                   >
                     <div className="flex flex-col items-center space-y-2 justify-center">
                       <h4 className="flex items-center text-white font-semibold text-lg">
-                        <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -170,10 +171,10 @@ const HeroVslRedesigned = () => {
                             d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
                         </svg>
-                        Preview
+                        Free Preview
                       </h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        We show you a homepage.
+                        See your new homepage.
                       </p>
                     </div>
                   </motion.div>
@@ -187,7 +188,7 @@ const HeroVslRedesigned = () => {
                   >
                     <div className="flex flex-col items-center space-y-2 justify-center">
                       <h4 className="flex items-center text-white font-semibold text-lg">
-                        <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check, Star, MapPin, Palette, Eye } from "lucide-react"
+import { Check, Star, MapPin, Palette, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -12,21 +12,21 @@ const features = [
     title: "Custom Design",
     subtitle: "Tailored to your brand",
     icon: Palette,
-    color: "bg-[#4CAF50]",
+    color: "bg-[#F4A261]",
   },
   {
     id: 2,
     title: "HIPAA-compliant",
     subtitle: "Secure online forms",
-    icon: Eye,
-    color: "bg-[#F4A261]",
+    icon: Lock,
+    color: "bg-[#1D3557]",
   },
   {
     id: 3,
     title: "Local SEO",
-    subtitle: "Google Maps visibility",
+    subtitle: "Google AI and Maps visibility",
     icon: MapPin,
-    color: "bg-[#1D3557]",
+    color: "bg-[#4CAF50]",
   },
 ]
 
@@ -160,9 +160,9 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
               {/* Key Benefits */}
               <div className="space-y-2 mb-6">
                 {[
-                  "Custom dental website design",
-                  "Mobile-optimized & fast loading",
-                  "SEO setup for local search",
+                  "Unlimited design revisions (90 days)",
+                  "Unlimited content updates (90 days)",
+                  "Up to 10 pages included *",
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-[#4CAF50]/10 flex items-center justify-center flex-shrink-0">
@@ -171,7 +171,11 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                     <span className="text-sm text-[#1D3557]/80">{benefit}</span>
                   </div>
                 ))}
+                <p className="text-xs text-[#1D3557]/50 mt-3 text-left ml-8">
+                *($100 for each additional page)
+                </p>
               </div>
+              
 
               {/* CTA Button */}
               <motion.div
@@ -193,7 +197,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
               </motion.div>
 
               <p className="text-xs text-[#1D3557]/50 mt-3 text-center">
-                No credit card required • 30-day money-back guarantee
+                No credit card required • 90-day money-back guarantee
               </p>
             </div>
           </motion.div>
@@ -209,15 +213,15 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm text-[#1D3557]/60">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#4CAF50]" />
-              <span>7-day delivery</span>
+              <span>10-Day Delivery</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#4CAF50]" />
-              <span>Unlimited revisions</span>
+              <span>No Upfront Costs</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#4CAF50]" />
-              <span>Dedicated support</span>
+              <span>90-Day Money-Back Guarantee</span>
             </div>
           </div>
         </motion.div>
