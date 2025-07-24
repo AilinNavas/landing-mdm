@@ -33,7 +33,7 @@ export default function MarketingProcess() {
 
   return (
     <section className="bg-[#F5F5F5] py-20 px-6 relative overflow-hidden">
- 
+
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
@@ -71,14 +71,14 @@ export default function MarketingProcess() {
 
                 {/* Card */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 h-full transition-all duration-300 group-hover:shadow-2xl group-hover:border-[#4CAF50]/20 relative z-10">
-                
+
 
                   {/* Icon */}
                   <div className="mb-6">
-                     {/* Step Number */}
-                  <div className=" w-12 h-12 bg-gradient-to-br from-[#4CAF50] to-[#2e7d32] rounded-2xl flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-lg">{step.number}</span>
-                  </div>
+                    {/* Step Number */}
+                    <div className=" w-12 h-12 bg-gradient-to-br from-[#4CAF50] to-[#2e7d32] rounded-2xl flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-lg">{step.number}</span>
+                    </div>
                   </div>
 
                   {/* Content */}
@@ -104,51 +104,57 @@ export default function MarketingProcess() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-        
-            <div className="mb-8">
-              <motion.div 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 250 }}
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-2xl rounded-md uppercase text-lg tracking-wide px-8 py-4"
-                >
-                  Book Your Free Preview
+
+          <div className="mb-8">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 250 }}
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-2xl rounded-md uppercase text-lg tracking-wide px-8 py-4"
+                asChild
+              ><a
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              > Book Your Free Preview
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </motion.div>
-            </div>
+                </a>
+              </Button>
+            </motion.div>
+          </div>
 
-            <div className="space-y-4">
-              <p className="text-[#4CAF50] font-bold text-xl uppercase tracking-wide">
-                See First. Pay Later.
-              </p>
-              <p className="text-[#1D3557] max-w-2xl mx-auto leading-relaxed">
-                We only invoice if you're thrilled with the preview. It's that simple.
-              </p>
-            </div>
+          <div className="space-y-4">
+            <p className="text-[#4CAF50] font-bold text-xl uppercase tracking-wide">
+              See First. Pay Later.
+            </p>
+            <p className="text-[#1D3557] max-w-2xl mx-auto leading-relaxed">
+              We only invoice if you're thrilled with the preview. It's that simple.
+            </p>
+          </div>
 
-            {/* Trust Indicators */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-[#1D3557]/70">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
-                <span>No upfront costs</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
-                <span>No contracts</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
-                <span>100% risk-free</span>
-              </div>
+          {/* Trust Indicators */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-[#1D3557]/70">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
+              <span>No upfront costs</span>
             </div>
-          
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
+              <span>No contracts</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
+              <span>100% risk-free</span>
+            </div>
+          </div>
+
         </motion.div>
 
-        
+
       </div>
     </section>
   )

@@ -15,7 +15,7 @@ const FAQAccordion = () => {
       id: "pricing",
       title: "Pricing & Payment",
       icon: <DollarSign className="h-5 w-5" />,
-    
+
       questions: [
         {
           id: "pricing-1",
@@ -29,7 +29,7 @@ const FAQAccordion = () => {
           answer:
             "No catch. We believe in earning your trust before asking for a dime. You'll see a fully designed homepage and service page first. If you love it, we move forward. If not, you walk away—no pressure, no payment.",
         },
-        
+
         {
           id: "pricing-3",
           question: "What if I change my mind after paying?",
@@ -258,8 +258,14 @@ const FAQAccordion = () => {
               className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg  uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
+            ><a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
-              Book Free Consultation
+                Book Free Consultation
+              </a>
             </motion.button>
           </div>
         </motion.div>

@@ -23,7 +23,7 @@ export default function WebDesignPage() {
 
       <main className="flex-1">
         <div className="bg-[#1c2e4a] flex items-center justify-center py-4 ">
-          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.png'} width={300} height={200}/>
+          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.png'} width={300} height={200} />
         </div>
 
         <HeroVsl />
@@ -109,9 +109,16 @@ export default function WebDesignPage() {
                   <Button
                     size="lg"
                     className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                    asChild
+                  ><a
+                    href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
                   >
-                    GET STARTED TODAY
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                      GET STARTED TODAY
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
                   </Button>
                 </motion.div>
               </div>
@@ -176,7 +183,7 @@ export default function WebDesignPage() {
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Slow loading speed</span>
                     </div>
-                  
+
                     <div className="flex items-center">
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">No clear call-to-action</span>
@@ -185,7 +192,7 @@ export default function WebDesignPage() {
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Not optimized for SEO</span>
                     </div>
-                      <div className="flex items-center">
+                    <div className="flex items-center">
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Poor mobile experience</span>
                     </div>
@@ -232,7 +239,7 @@ export default function WebDesignPage() {
                   </div>
 
                   <div className="space-y-2 flex flex-col items-start md:items-center">
-                   
+
                     <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
                       <span className="font-medium text-[#1D3557]">Lightning-fast loading</span>
@@ -241,11 +248,11 @@ export default function WebDesignPage() {
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
                       <span className="font-medium text-[#1D3557]">Strategic CTAs that convert</span>
                     </div>
-                     <div className="flex items-center">
+                    <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
                       <span className="font-medium text-[#1D3557]">Modern, professional design</span>
                     </div>
-                      <div className="flex items-center">
+                    <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
                       <span className="font-medium text-[#1D3557]">Fully responsive on all devices</span>
                     </div>
@@ -265,9 +272,16 @@ export default function WebDesignPage() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                  asChild
+                ><a
+                  href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
                 >
-                  LET'S BUILD YOUR WEBSITE
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                    LET'S BUILD YOUR WEBSITE
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
               </motion.div>
             </div>
@@ -278,8 +292,8 @@ export default function WebDesignPage() {
         <FAQAccordion />
 
         <LightningProcess />
-           <div className="bg-[#1D3557] flex items-center justify-center py-4 mb-20 md:mb-0">
-          <Image alt="logo-mucho-dental-marketing" src={'/images/logo2.png'} width={300} height={200}/>
+        <div className="bg-[#1D3557] flex items-center justify-center py-4 mb-20 md:mb-0">
+          <Image alt="logo-mucho-dental-marketing" src={'/images/logo2.png'} width={300} height={200} />
         </div>
 
       </main>
@@ -287,9 +301,17 @@ export default function WebDesignPage() {
       {/* Sticky CTA Bar for Mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
         <div className="container mx-auto flex items-center justify-between px-4">
-          <Button className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide">
-            <Rocket className="mr-2 h-5 w-5" />
-            <span className="uppercase text-lg">Build My Website</span>
+          <Button className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+            asChild>
+            <a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Rocket className="mr-2 h-5 w-5" />
+              <span className="uppercase text-lg">Build My Website</span>
+            </a>
           </Button>
         </div>
       </div>

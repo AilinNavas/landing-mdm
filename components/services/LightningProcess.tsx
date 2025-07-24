@@ -27,7 +27,7 @@ export default function DreamSiteFlow() {
 
   return (
     <section className="bg-[#1D3557] py-20 relative overflow-hidden">
-      
+
       <div className="container px-4 sm:px-6 mx-auto max-w-4xl relative z-10">
         {/* Header */}
         <motion.div
@@ -64,7 +64,7 @@ export default function DreamSiteFlow() {
                       <feature.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <h3 className="text-xl font-semibold text-white mb-4 leading-tight uppercase">
                     {feature.title}
@@ -92,7 +92,7 @@ export default function DreamSiteFlow() {
             <p className="text-gray-300 mb-8 text-lg max-w-2xl mx-auto">
               Join hundreds of dental professionals who've transformed their online presence with our risk-free preview process.
             </p>
-            
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
@@ -101,12 +101,19 @@ export default function DreamSiteFlow() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                asChild
+              ><a
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
               >
-               Get a Website
-                <ArrowRight className="ml-2 h-5 w-5" />
+                  Get a Website
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </motion.div>
-            
+
             <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-[#4CAF50] rounded-full"></div>
@@ -124,7 +131,7 @@ export default function DreamSiteFlow() {
           </div>
         </motion.div>
 
-      
+
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
             Everything you need for a high-converting dental website that brings in new patients.
           </p>
         </div>
-   
+
 
         {/* Main Content */}
         <div className="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
@@ -69,7 +69,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                 style={{ objectPosition: "center top" }}
               />
 
-             
+
             </div>
 
             {/* Feature Cards Container - Right at the bottom edge */}
@@ -124,7 +124,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
                             transition={{ duration: 0.2 }}
-                          ><Check className="text-[#4CAF50]"/></motion.div>
+                          ><Check className="text-[#4CAF50]" /></motion.div>
                         )}
                       </AnimatePresence>
                     </div>
@@ -145,14 +145,14 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
             transition={{ duration: 0.7, delay: 0.5 }}
           >
             <div className="bg-gradient-to-br from-white to-[#F4A261]/10 rounded-2xl p-6 md:p-8 shadow-xl border border-[#1D3557]/10">
-             
+
 
               {/* Pricing */}
               <div className="text-center mb-6">
                 <h3 className="text-2xl md:text-3xl font-light text-[#1D3557] mb-2">Complete Package</h3>
                 <div className="flex items-baseline justify-center mb-2">
                   <span className="text-3xl md:text-4xl font-extrabold text-[#4CAF50]">$3,497</span>
-             
+
                 </div>
                 <p className="text-sm text-[#1D3557]/60">One-time payment • No hidden fees</p>
               </div>
@@ -180,8 +180,15 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 className="flex justify-center"
               >
-                <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide">
-                Free Design Preview
+                <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                  asChild>
+                  <a
+                    href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  
+                  >
+                    Free Design Preview</a>
                 </Button>
               </motion.div>
 

@@ -11,12 +11,7 @@ const HeroVslRedesigned = () => {
     "Real results, risk-free",
   ]
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact-form")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -82,11 +77,18 @@ const HeroVslRedesigned = () => {
                   >
                     <Button
                       size="lg"
-                      onClick={scrollToContact}
                       className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                      asChild
                     >
-                      Book My Free Design Meeting
-                      <ArrowRight className="ml-2 h-5 w-5 hidden md:block" />
+                      <a
+                        href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center"
+                      >
+                        Book My Free Design Meeting
+                        <ArrowRight className="ml-2 h-5 w-5 hidden md:inline-block" />
+                      </a>
                     </Button>
                   </motion.div>
                   <p className="text-center text-sm text-gray-200 pt-2 font-medium">
@@ -105,19 +107,19 @@ const HeroVslRedesigned = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Video Container - Maximized */}
-            <div className="relative aspect-[9/10] md:aspect-[9/6] overflow-hidden">
-              <video
-                src='/videos/hero3.mp4'
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-                style={{ objectPosition: "center top" }}
-              />
+              <div className="relative aspect-[9/10] md:aspect-[9/6] overflow-hidden">
+                <video
+                  src='/videos/hero3.mp4'
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center top" }}
+                />
 
-             
-            </div>
+
+              </div>
 
               {/* Process Steps Container - Below Video */}
               <motion.div
