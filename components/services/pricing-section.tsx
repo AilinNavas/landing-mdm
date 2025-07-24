@@ -69,7 +69,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Video Container */}
-            <div className="relative w-full aspect-[9/10] overflow-hidden border-2">
+            <div className="relative w-full aspect-[9/10] overflow-hidden">
               <video
                 src={videoSrc}
                 autoPlay
