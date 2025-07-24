@@ -1,103 +1,7 @@
-
-// 'use client'
-
-// import { Check, ArrowRight, Play } from 'lucide-react'
-// import { Button } from '@/components/ui/button'
-// import { motion } from 'framer-motion'
-// import { useState } from 'react'
-
-// const HeroVsl = () => {
-
-//   const highlights = [
-//     'No contracts. No commitments.',
-//     '100% custom design based on your brand',
-//     'HIPAA-compliant forms & SEO-optimized',
-//     'Real results, risk-free',
-//   ]
-
-
-
-//   const scrollToContact = () => {
-//     const element = document.getElementById('contact-form')
-//     if (element) {
-//       element.scrollIntoView({ behavior: 'smooth' })
-//     }
-//   }
-
-//   return (
-//     <section id="hero-vsl" className="relative overflow-hidden bg-[#1D3557] py-20">
-//       <div className="container px-4 sm:px-6 mx-auto">
-//         <div className="mx-auto">
-//           <div className="grid gap-8 md:grid-cols-2 md:items-center">
-//             {/* Left Side */}
-//             <div className="space-y-6">
-//               <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl uppercase text-center md:text-left">
-//                 See Your New Dental Website{' '}
-//                 <span className="text-[#4CAF50]">Before You Pay a Dime</span>
-//               </h1>
-
-//               <p className="text-xl text-white text-center md:text-left">
-//                 We&apos;ll design a custom homepage and service page for your practice—based on your story, tone, and
-//                 goals. You only pay if you love it.
-//               </p>
-
-//               <div className="space-y-3 ">
-//                 {highlights.map((highlight, i) => (
-//                   <div key={i} className="flex items-center gap-3">
-//                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4CAF50]">
-//                       <Check className="h-4 w-4 text-white" />
-//                     </div>
-//                     <span className="text-lg font-medium text-white">{highlight}</span>
-//                   </div>
-//                 ))}
-//               </div>
-
-//               <div className="flex justify-center md:justify-start">
-//                 <div className="pt-4">
-//                   <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 250 }}>
-//                     <Button
-//                       size="lg"
-//                       className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
-//                     >
-//                       Book My Free Design Meeting
-//                       <ArrowRight className="ml-2 h-5 w-5 hidden md:block" />
-//                     </Button>
-//                   </motion.div>
-//                   <p className='text-center text-sm text-gray-200 pt-2 font-medium'>We’ll build your homepage first — pay only if you're thrilled.<span className='text-[#4CAF50] font-semibold'> $3,497</span></p>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Right Side - Canva Video Embed */}
-//             <div className="order-first md:order-last pr-3 md:pr-0">
-//               <div className="relative w-full aspect-video rounded-md overflow-hidden shadow-lg">
-
-//                 <iframe
-//                   src="https://www.canva.com/design/DAGsm90S8zY/wYVdgERxYXD8L3VgbkQjfQ/watch?embed"
-//                   title="Canva Video"
-//                   className="w-full h-full rounded-md"
-//                   allowFullScreen
-//                 ></iframe>
-//               </div>
-
-//               <p className="mt-4 text-center text-sm font-medium text-[#1D3557]">
-//                 Watch: How We Build Your Website Before You Ever Pay
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default HeroVsl
-
 "use client"
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 const HeroVslRedesigned = () => {
   const highlights = [
@@ -105,21 +9,6 @@ const HeroVslRedesigned = () => {
     "100% custom design based on your brand",
     "HIPAA-compliant forms & SEO-optimized",
     "Real results, risk-free",
-  ]
-
-  const benefits = [
-    {
-      icon: <Check className="h-5 w-5" />,
-      text: "No Up-Front Costs",
-    },
-    {
-      icon: <Check className="h-5 w-5" />,
-      text: "90-Day Guarantee",
-    },
-    {
-      icon: <Check className="h-5 w-5" />,
-      text: "10-Day Turnaround",
-    },
   ]
 
   const scrollToContact = () => {
@@ -152,10 +41,10 @@ const HeroVslRedesigned = () => {
   }
 
   return (
-    <section id="hero-vsl" className="relative overflow-hidden bg-[#1D3557] py-20">
+    <section id="hero-vsl" className="relative overflow-hidden bg-[#1d3557] py-16">
       <div className="container px-4 sm:px-6 mx-auto">
         <div className="mx-auto">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             {/* Left Side */}
             <motion.div className="space-y-6" variants={containerVariants} initial="hidden" animate="visible">
               <motion.h1
@@ -164,12 +53,10 @@ const HeroVslRedesigned = () => {
               >
                 See Your New Dental Website <span className="text-[#4CAF50]">Before You Pay a Dime</span>
               </motion.h1>
-
               <motion.p className="text-xl text-white text-center md:text-left" variants={itemVariants}>
                 We&apos;ll design a custom homepage and service page for your practice—based on your story, tone, and
                 goals. You only pay if you love it.
               </motion.p>
-
               <motion.div className="space-y-3" variants={itemVariants}>
                 {highlights.map((highlight, i) => (
                   <motion.div
@@ -186,7 +73,6 @@ const HeroVslRedesigned = () => {
                   </motion.div>
                 ))}
               </motion.div>
-
               <motion.div className="flex justify-center md:justify-start" variants={itemVariants}>
                 <div className="pt-4">
                   <motion.div
@@ -211,84 +97,31 @@ const HeroVslRedesigned = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Side - GIF Mockup with Benefits and Pricing */}
+            {/* Right Side - Video with Process Steps Below */}
             <motion.div
-              className="order-first md:order-last space-y-6"
+              className="order-last flex flex-col items-center"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-
-
-              {/* GIF Container */}
-              <motion.div
-                className="relative"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="relative w-full aspect-[5/3] bg-black rounded-lg overflow-hidden shadow-inner">
-                  {/* Mockup PC Frame */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black to-gray-900 rounded-lg">
-                    {/* Screen bezel */}
-                    <div className="absolute inset-2 bg-black rounded-md overflow-hidden">
-                      {/* Placeholder for GIF - replace src with actual GIF */}
-                      <img
-                        src="/videos/hero.gif"
-                        alt="Dental website mockup scrolling"
-                        className="w-full h-full"
-                      />
-
-                      {/* Animated overlay to simulate scrolling */}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent"
-                        animate={{
-                          y: ["-100%", "100%"],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Number.POSITIVE_INFINITY,
-                          ease: "linear",
-                        }}
-                      />
-                    </div>
-
-                    {/* PC Stand */}
-
-                  </div>
-                </div>
-
-                {/* Floating elements for visual interest */}
-                <motion.div
-                  className="absolute -top-2 -right-2 w-4 h-4 bg-[#4CAF50] rounded-full"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.7, 1, 0.7],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  }}
+              {/* Video Container - Maximized */}
+              <div className="relative w-full mx-auto">
+                <video
+                  src='/videos/hero3.mp4'
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-cover"
                 />
-                <motion.div
-                  className="absolute -bottom-2 -left-2 w-3 h-3 bg-white rounded-full"
-                  animate={{
-                    scale: [1, 1.3, 1],
-                    opacity: [0.5, 0.8, 0.5],
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                    delay: 0.5,
-                  }}
-                />
-              </motion.div>
+                
+            
+               
+              </div>
 
-
-              {/* Bottom Process Steps - Simplified */}
+              {/* Process Steps Container - Below Video */}
               <motion.div
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+                className="w-full bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -301,7 +134,6 @@ const HeroVslRedesigned = () => {
                     transition={{ delay: 0.8 }}
                   >
                     <div className="flex flex-col items-center space-y-2 justify-center">
-
                       <h4 className="flex items-center text-white font-semibold text-lg">
                         <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
@@ -310,10 +142,13 @@ const HeroVslRedesigned = () => {
                             strokeWidth={2}
                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                           />
-                        </svg>Meet</h4>
+                        </svg>
+                        Meet
+                      </h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        30-min call. No pressure. 
-                      </p></div>
+                        30-min call. No pressure.
+                      </p>
+                    </div>
                   </motion.div>
 
                   {/* Step 2 - Preview */}
@@ -324,7 +159,6 @@ const HeroVslRedesigned = () => {
                     transition={{ delay: 0.9 }}
                   >
                     <div className="flex flex-col items-center space-y-2 justify-center">
-
                       <h4 className="flex items-center text-white font-semibold text-lg">
                         <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
@@ -333,10 +167,13 @@ const HeroVslRedesigned = () => {
                             strokeWidth={2}
                             d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
-                        </svg>Preview</h4>
+                        </svg>
+                        Preview
+                      </h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
                         We show you a homepage.
-                      </p></div>
+                      </p>
+                    </div>
                   </motion.div>
 
                   {/* Step 3 - Pay If You Love It */}
@@ -347,7 +184,6 @@ const HeroVslRedesigned = () => {
                     transition={{ delay: 1.0 }}
                   >
                     <div className="flex flex-col items-center space-y-2 justify-center">
-
                       <h4 className="flex items-center text-white font-semibold text-lg">
                         <svg className="w-6 h-6 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
@@ -356,13 +192,13 @@ const HeroVslRedesigned = () => {
                             strokeWidth={2}
                             d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
                           />
-                        </svg>Pay If You Love It</h4>
+                        </svg>
+                        Pay If You Love It
+                      </h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
                         If you're happy, you pay.
-                      </p></div>
-
-
-
+                      </p>
+                    </div>
                   </motion.div>
                 </div>
 
@@ -373,8 +209,6 @@ const HeroVslRedesigned = () => {
                 </div>
               </motion.div>
             </motion.div>
-
-
           </div>
         </div>
       </div>
