@@ -39,7 +39,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
 
   return (
     <section className="bg-white py-16 relative">
-      <div className="container  px-4 sm:px-6 mx-auto max-w-5xl">
+      <div className="container px-4 sm:px-6 mx-auto max-w-5xl">
         <div className="mx-auto mb-12 text-center">
           <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">Complete Web Design Package</h2>
           <p className="text-xl leading-relaxed text-[#1D3557]">
