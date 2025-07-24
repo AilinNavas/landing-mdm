@@ -23,7 +23,7 @@ export default function WebDesignPage() {
 
       <main className="flex-1">
         <div className="bg-[#1c2e4a] flex items-center justify-center pt-4 ">
-          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.png'} width={300} height={200} />
+          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.webp'} width={300} height={200} />
         </div>
 
         <HeroVsl />
@@ -300,7 +300,7 @@ export default function WebDesignPage() {
 
         <LightningProcess />
         <div className="bg-[#1D3557] flex items-center justify-center py-4 mb-20 md:mb-0">
-          <Image alt="logo-mucho-dental-marketing" src={'/images/logo2.png'} width={300} height={200} />
+          <Image alt="logo-mucho-dental-marketing" src={'/images/logo2.webp'} width={300} height={200} />
         </div>
 
       </main>
