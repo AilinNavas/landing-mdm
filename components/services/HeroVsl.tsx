@@ -41,7 +41,7 @@ const HeroVslRedesigned = () => {
   }
 
   return (
-    <section id="hero-vsl" className="relative overflow-hidden bg-[#1d3557] py-16">
+    <section id="hero-vsl" className="relative overflow-hidden bg-[#1c2e4a] py-16">
       <div className="container px-4 sm:px-6 mx-auto">
         <div className="mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
@@ -105,19 +105,19 @@ const HeroVslRedesigned = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Video Container - Maximized */}
-              <div className="relative w-full mx-auto">
-                <video
-                  src='/videos/hero3.mp4'
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto object-cover"
-                />
-                
-            
-               
-              </div>
+            <div className="relative aspect-[9/10] md:aspect-[9/6] overflow-hidden">
+              <video
+                src='/videos/hero3.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center top" }}
+              />
+
+             
+            </div>
 
               {/* Process Steps Container - Below Video */}
               <motion.div
