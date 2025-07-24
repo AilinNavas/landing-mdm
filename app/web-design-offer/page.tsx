@@ -35,7 +35,7 @@ export default function WebDesignPage() {
 
         {/* Seccion azul de mockup */}
         <section className="relative overflow-hidden bg-[#1D3557] py-20 text-white">
-          <div className="container grid gap-8 md:grid-cols-2 md:items-center">
+          <div className="container grid gap-8 md:grid-cols-2 md:items-center px-4 sm:px-6 mx-auto max-w-6xl">
 
             {/* Website Mockup */}
             <div className="relative mx-auto max-w-md">
@@ -122,7 +122,7 @@ export default function WebDesignPage() {
 
         {/* 5️⃣ Before & After Section */}
         <section className="bg-white py-16">
-          <div className="container">
+          <div className="container px-4 sm:px-6 mx-auto max-w-5xl">
             <div className="mx-auto mb-12 text-center">
               <h2 className="md:text-5xl mb-6 text-4xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">
                 Before & After: The Transformation
@@ -167,7 +167,7 @@ export default function WebDesignPage() {
                     <div className="absolute -bottom-2 left-1/2 h-2 w-full -translate-x-1/2 rounded-full bg-black/10 blur-sm"></div>
                   </div>
 
-                  <div className="space-y-2 flex flex-col items-center">
+                  <div className="space-y-2 flex flex-col items-start md:items-center">
                     <div className="flex items-center">
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Outdated design</span>
@@ -176,10 +176,7 @@ export default function WebDesignPage() {
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Slow loading speed</span>
                     </div>
-                    <div className="flex items-center">
-                      <X className="mr-2 h-5 w-5 text-red-500" />
-                      <span className="text-gray-600">Poor mobile experience</span>
-                    </div>
+                  
                     <div className="flex items-center">
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">No clear call-to-action</span>
@@ -187,6 +184,10 @@ export default function WebDesignPage() {
                     <div className="flex items-center">
                       <X className="mr-2 h-5 w-5 text-red-500" />
                       <span className="text-gray-600">Not optimized for SEO</span>
+                    </div>
+                      <div className="flex items-center">
+                      <X className="mr-2 h-5 w-5 text-red-500" />
+                      <span className="text-gray-600">Poor mobile experience</span>
                     </div>
                   </div>
                 </div>
@@ -230,22 +231,23 @@ export default function WebDesignPage() {
                     <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-[#4CAF50]/20 to-transparent blur-xl -z-10"></div>
                   </div>
 
-                  <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">Modern, professional design</span>
-                    </div>
+                  <div className="space-y-2 flex flex-col items-start md:items-center">
+                   
                     <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
                       <span className="font-medium text-[#1D3557]">Lightning-fast loading</span>
                     </div>
                     <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
-                      <span className="font-medium text-[#1D3557]">Fully responsive on all devices</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
                       <span className="font-medium text-[#1D3557]">Strategic CTAs that convert</span>
+                    </div>
+                     <div className="flex items-center">
+                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+                      <span className="font-medium text-[#1D3557]">Modern, professional design</span>
+                    </div>
+                      <div className="flex items-center">
+                      <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
+                      <span className="font-medium text-[#1D3557]">Fully responsive on all devices</span>
                     </div>
                     <div className="flex items-center">
                       <Check className="mr-2 h-5 w-5 text-[#4CAF50]" />
@@ -276,8 +278,8 @@ export default function WebDesignPage() {
         <FAQAccordion />
 
         <LightningProcess />
-           <div className="bg-[#1D3557] flex items-center justify-center py-4 ">
-          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.png'} width={300} height={200}/>
+           <div className="bg-[#1D3557] flex items-center justify-center py-4 mb-20 md:mb-0">
+          <Image alt="logo-mucho-dental-marketing" src={'/images/logo2.png'} width={300} height={200}/>
         </div>
 
       </main>

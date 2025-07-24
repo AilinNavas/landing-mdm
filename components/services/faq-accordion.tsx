@@ -160,7 +160,7 @@ const FAQAccordion = () => {
 
   return (
     <section className="py-20 bg-gray-50">
-      <div className="container px-4 sm:px-6 mx-auto max-w-4xl">
+      <div className="container px-4 sm:px-6 mx-auto max-w-5xl">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -209,7 +209,7 @@ const FAQAccordion = () => {
                       className="w-full px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:bg-gray-50"
                     >
                       <div className="flex items-center justify-between">
-                        <h4 className="text-lg font-semibold text-[#1D3557] pr-4">{faq.question}</h4>
+                        <h4 className="text-lg font-medium text-[#1D3557] pr-4">{faq.question}</h4>
                         <motion.div
                           animate={{ rotate: openItems.includes(faq.id) ? 180 : 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -255,7 +255,7 @@ const FAQAccordion = () => {
               We're here to help. Book a free consultation and get all your questions answered.
             </p>
             <motion.button
-              className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg font-semibold uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg "
+              className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg  uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >

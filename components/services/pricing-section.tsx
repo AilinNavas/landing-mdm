@@ -39,25 +39,14 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
 
   return (
     <section className="bg-white py-16 relative">
-      <div className="container">
+      <div className="container  px-4 sm:px-6 mx-auto max-w-5xl">
         <div className="mx-auto mb-12 text-center">
           <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#1D3557] leading-tight uppercase text-center">Complete Web Design Package</h2>
-          <p className="text-lg text-[#1D3557]">
+          <p className="text-xl leading-relaxed text-[#1D3557]">
             Everything you need for a high-converting dental website that brings in new patients.
           </p>
         </div>
-        {/* <motion.div
-          className="text-center mb-8 md:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-5xl font-light text-[#1D3557] mb-3 md:mb-4">Elevate Your Practice</h2>
-          <p className="text-base md:text-lg text-[#1D3557]/80 max-w-2xl mx-auto px-4">
-            Websites designed to attract more patients and grow your practice
-          </p>    {/* Header */}
-    
-        {/* </motion.div> */} 
+   
 
         {/* Main Content */}
         <div className="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
@@ -104,10 +93,10 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                   >
                     <div
                       className={cn(
-                        "relative bg-white rounded-xl shadow-md border border-gray-100",
-                        "p-3 md:p-4 text-center",
+                        "relative bg-white",
+                        "p-3 text-center",
                         "transition-all duration-300",
-                        activeCard === feature.id && "shadow-lg scale-105",
+                        activeCard === feature.id && "",
                       )}
                     >
                       {/* Icon */}
@@ -130,12 +119,12 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                       <AnimatePresence>
                         {activeCard === feature.id && (
                           <motion.div
-                            className="absolute -top-1 -right-1 w-3 h-3 bg-[#4CAF50] rounded-full"
+                            className="absolute -top-1 -right-1"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
                             transition={{ duration: 0.2 }}
-                          />
+                          ><Check className="text-[#4CAF50]"/></motion.div>
                         )}
                       </AnimatePresence>
                     </div>
@@ -172,7 +161,6 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
               <div className="space-y-2 mb-6">
                 {[
                   "Custom dental website design",
-                  "1 year hosting included",
                   "Mobile-optimized & fast loading",
                   "SEO setup for local search",
                 ].map((benefit, index) => (
@@ -190,6 +178,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                className="flex justify-center"
               >
                 <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide">
                 Free Design Preview
