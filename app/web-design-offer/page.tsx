@@ -121,7 +121,7 @@ export default function WebDesignPage() {
                     </a>
                   </Button>
                   <p className="text-xs text-white mt-3 text-center">
-                   No credit card required • Risk-free
+                    No credit card required • Risk-free
                   </p>
                 </motion.div>
               </div>
@@ -285,10 +285,10 @@ export default function WebDesignPage() {
                     Free Web Design Preview
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
-                  
+
                 </Button>
                 <p className="text-xs text-[#1D3557]/50 mt-3 text-center">
-                   No credit card required • 90-day money-back guarantee
+                  No credit card required • 90-day money-back guarantee
                 </p>
               </motion.div>
             </div>
@@ -306,7 +306,7 @@ export default function WebDesignPage() {
       </main>
 
       {/* Sticky CTA Bar for Mobile */}
-       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
         <div className="container mx-auto flex items-center justify-between px-4">
           <Button className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
             asChild>
@@ -321,7 +321,7 @@ export default function WebDesignPage() {
             </a>
           </Button>
         </div>
-      </div> 
+      </div>
 
 
     </div>
