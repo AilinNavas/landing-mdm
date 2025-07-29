@@ -2,6 +2,7 @@
 import { Check, ArrowRight, VideoIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import CalPopupButton from './CalPopupButton'
 
 const HeroVslRedesigned = () => {
   const highlights = [
@@ -75,7 +76,7 @@ const HeroVslRedesigned = () => {
                     whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 250 }}
                   >
-                    <Button
+                    {/* <Button
                       size="lg"
                       className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                       asChild
@@ -89,8 +90,10 @@ const HeroVslRedesigned = () => {
                         Book My Free Design Meeting
                         <ArrowRight className="ml-2 h-5 w-5 hidden md:inline-block" />
                       </a>
-                    </Button>
+                    </Button> */}
+                    <CalPopupButton />
                   </motion.div>
+          
                   <p className="text-center text-sm text-gray-200 pt-2 font-medium">
                     We'll build your homepage first — pay only if you're thrilled.
                     <span className="text-[#4CAF50] font-semibold"> $3,497</span>

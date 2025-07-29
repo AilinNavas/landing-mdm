@@ -14,6 +14,7 @@ import LightningProcess from "@/components/services/LightningProcess"
 import MarketingProcess from "@/components/services/marketing-process"
 import FAQAccordion from "@/components/services/faq-accordion"
 import PricingSection from "@/components/services/pricing-section"
+import CalPopupButton from "@/components/services/CalPopupButton"
 
 
 export default function WebDesignPage() {
