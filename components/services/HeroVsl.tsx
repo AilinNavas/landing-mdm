@@ -3,6 +3,7 @@ import { Check, ArrowRight, VideoIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import CalPopupButton from './CalPopupButton'
+import BookingButton from '../BookingButton'
 
 const HeroVslRedesigned = () => {
   const highlights = [
@@ -11,8 +12,6 @@ const HeroVslRedesigned = () => {
     "100% custom design",
     "Mobile-friendly",
   ]
-
-
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -69,37 +68,11 @@ const HeroVslRedesigned = () => {
                   </motion.div>
                 ))}
               </motion.div>
-              <motion.div className="flex justify-center md:justify-start" variants={itemVariants}>
-                <div className="pt-4">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ type: "spring", stiffness: 250 }}
-                  >
-                    {/* <Button
-                      size="lg"
-                      className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
-                      asChild
-                    >
-                      <a
-                        href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center"
-                      >
-                        Book My Free Design Meeting
-                        <ArrowRight className="ml-2 h-5 w-5 hidden md:inline-block" />
-                      </a>
-                    </Button> */}
-                    <CalPopupButton />
-                  </motion.div>
-          
-                  <p className="text-center text-sm text-gray-200 pt-2 font-medium">
+             <BookingButton />
+               <p className=" text-sm text-gray-200 font-medium">
                     We'll build your homepage first — pay only if you're thrilled.
                     <span className="text-[#4CAF50] font-semibold"> $3,497</span>
-                  </p>
-                </div>
-              </motion.div>
+                </p>
             </motion.div>
 
             {/* Right Side - Video with Process Steps Below */}

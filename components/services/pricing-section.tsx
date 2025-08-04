@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Check, Star, MapPin, Palette, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 const features = [
   {
@@ -184,7 +185,7 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 className="flex justify-center"
               >
-                <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                 <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                   asChild>
                   <a
                     href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
@@ -193,7 +194,11 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                   
                   >
                     Free Design Preview</a>
-                </Button>
+                </Button> 
+                    {/* <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                  asChild>
+                    <Link href={'/schedule'}> Free Design Preview</Link> 
+                </Button> */}
               </motion.div>
 
               <p className="text-xs text-[#1D3557]/50 mt-3 text-center">
