@@ -20,7 +20,7 @@ export async function POST(req) {
                         }
                     }
                 ],
-                test_event_code: "my-test-code"
+               test_event_code: TEST46052
                 //         // access_token: process.env.META_ACCESS_TOKEN
             })
         });
