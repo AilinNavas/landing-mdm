@@ -107,7 +107,7 @@ export default function WebDesignPage() {
                   transition={{ type: 'spring', stiffness: 250 }}
                 >
                   <Button
-                    id="ClickBookButton"
+                   data-track="book-button"
                     size="lg"
                     className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                     asChild
@@ -274,7 +274,7 @@ export default function WebDesignPage() {
                 transition={{ type: 'spring', stiffness: 250 }}
               >
                 <Button
-                  id="ClickBookButton"
+                  data-track="book-button"
                   size="lg"
                   className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                   asChild
@@ -311,7 +311,7 @@ export default function WebDesignPage() {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
         <div className="container mx-auto flex items-center justify-between px-4">
           <Button
-            id='ClickBookButton'
+           data-track="book-button"
             className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
             asChild>
             <a

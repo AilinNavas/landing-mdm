@@ -2,7 +2,7 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import TrackingWrapper from "@/components/TrackingWrapper"
+import Wrapper from "@/components/Wrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TrackingWrapper>{children}</TrackingWrapper>
+        <Wrapper>{children}</Wrapper>
       </body>
     </html>
   )
