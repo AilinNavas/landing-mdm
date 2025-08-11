@@ -255,6 +255,7 @@ const FAQAccordion = () => {
               We're here to help. Book a free consultation and get all your questions answered.
             </p>
             <motion.button
+            id="ClickBookButton"
               className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg  uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}

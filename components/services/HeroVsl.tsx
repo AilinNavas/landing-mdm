@@ -2,8 +2,7 @@
 import { Check, ArrowRight, VideoIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import CalPopupButton from './CalPopupButton'
-import BookingButton from '../BookingButton'
+
 
 const HeroVslRedesigned = () => {
   const highlights = [
@@ -68,11 +67,25 @@ const HeroVslRedesigned = () => {
                   </motion.div>
                 ))}
               </motion.div>
-             <BookingButton />
-               <p className=" text-sm text-gray-200 font-medium">
-                    We'll build your homepage first — pay only if you're thrilled.
-                    <span className="text-[#4CAF50] font-semibold"> $3,497</span>
-                </p>
+              <Button
+              id='ClickBookButton'
+                size="lg"
+                className=" bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                asChild
+              ><a
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                  Free Web Design Preview
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <p className=" text-sm text-gray-200 font-medium">
+                We'll build your homepage first — pay only if you're thrilled.
+                <span className="text-[#4CAF50] font-semibold"> $3,497</span>
+              </p>
             </motion.div>
 
             {/* Right Side - Video with Process Steps Below */}
@@ -122,7 +135,7 @@ const HeroVslRedesigned = () => {
                           />
                         </svg> */}
                         <VideoIcon className="w-6 h-6 mr-3 text-white" />
-                        Meeting 
+                        Meeting
                       </h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
                         Tell us your story.

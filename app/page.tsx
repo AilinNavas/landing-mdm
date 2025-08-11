@@ -10,7 +10,6 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import HeroVsl from "@/components/services/HeroVsl"
 import LightningProcess from "@/components/services/LightningProcess"
-
 import MarketingProcess from "@/components/services/marketing-process"
 import FAQAccordion from "@/components/services/faq-accordion"
 import PricingSection from "@/components/services/pricing-section"
@@ -24,7 +23,7 @@ export default function WebDesignPage() {
 
       <main className="flex-1">
         <div className="bg-[#1c2e4a] flex items-center justify-center pt-4 ">
-          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.webp'} width={300} height={200} />
+          <Image alt="logo-mucho-dental-marketing" src={'/images/logo.webp'} width={300} height={200} priority />
         </div>
 
         <HeroVsl />
@@ -108,6 +107,7 @@ export default function WebDesignPage() {
                   transition={{ type: 'spring', stiffness: 250 }}
                 >
                   <Button
+                    id="ClickBookButton"
                     size="lg"
                     className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                     asChild
@@ -274,6 +274,7 @@ export default function WebDesignPage() {
                 transition={{ type: 'spring', stiffness: 250 }}
               >
                 <Button
+                  id="ClickBookButton"
                   size="lg"
                   className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                   asChild
@@ -309,7 +310,9 @@ export default function WebDesignPage() {
       {/* Sticky CTA Bar for Mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
         <div className="container mx-auto flex items-center justify-between px-4">
-          <Button className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+          <Button
+            id='ClickBookButton'
+            className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
             asChild>
             <a
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"

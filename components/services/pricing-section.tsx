@@ -2,10 +2,9 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check, Star, MapPin, Palette, Lock } from "lucide-react"
+import { Check, MapPin, Palette, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import Link from "next/link"
 
 const features = [
   {
@@ -173,10 +172,10 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                   </div>
                 ))}
                 <p className="text-xs text-[#1D3557]/50 mt-3 text-left ml-8">
-                *($100 for each additional page)
+                  *($100 for each additional page)
                 </p>
               </div>
-              
+
 
               {/* CTA Button */}
               <motion.div
@@ -185,17 +184,20 @@ export default function PricingSection({ videoSrc }: PricingSectionProps) {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 className="flex justify-center"
               >
-                 <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+
+                <Button 
+                id="ClickBookButton"
+                className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                   asChild>
                   <a
                     href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
                     target="_blank"
                     rel="noopener noreferrer"
-                  
+
                   >
                     Free Design Preview</a>
-                </Button> 
-                    {/* <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                </Button>
+                {/* <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                   asChild>
                     <Link href={'/schedule'}> Free Design Preview</Link> 
                 </Button> */}
