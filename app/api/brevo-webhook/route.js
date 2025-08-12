@@ -131,24 +131,25 @@
 //   }
 // }
 // pages/api/brevo-webhook.js
-export default async function handler(req, res) {
+import crypto from "crypto";
+
+function hash(value) {
+  return crypto.createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
+
+export async function POST(req) {
   try {
-    // 1. Validar método
-    if (req.method !== "POST") {
-      return res.status(405).json({ error: "Method not allowed" });
+    const secret = process.env.BREVO_WEBHOOK_SECRET;
+    const apiKey = req.headers.get("x-api-key");
+    if (apiKey !== secret) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
     }
 
-    // 2. Validar clave secreta
-    const apiKey = req.headers["x-api-key"];
-    if (apiKey !== process.env.BREVO_WEBHOOK_SECRET) {
-      return res.status(401).json({ error: "Unauthorized" });
-    }
+    const body = await req.json();
+    console.log("📩 Webhook recibido:", body);
 
-    // 3. Leer datos del body
-    const { eventName, email, phone, firstName, lastName, dealId } = req.body;
-    console.log("📩 Webhook recibido:", req.body);
+    const { eventName, email, phone, firstName, lastName, dealId } = body;
 
-    // 4. Mapear el nombre del evento
     let metaEventName;
     switch (eventName) {
       case "Scheduled":
@@ -164,7 +165,6 @@ export default async function handler(req, res) {
         metaEventName = "CustomEvent";
     }
 
-    // 5. Crear payload para Meta CAPI
     const payload = {
       data: [
         {
@@ -181,7 +181,6 @@ export default async function handler(req, res) {
       ]
     };
 
-    // 6. Enviar a Meta
     const fbResponse = await fetch(
       `https://graph.facebook.com/v20.0/${process.env.META_PIXEL_ID}/events?access_token=${process.env.META_ACCESS_TOKEN}`,
       {
@@ -194,16 +193,11 @@ export default async function handler(req, res) {
     const fbResult = await fbResponse.json();
     console.log("📤 Respuesta de Meta:", fbResult);
 
-    return res.status(200).json({ status: "ok", metaResponse: fbResult });
+    return new Response(JSON.stringify({ status: "ok", metaResponse: fbResult }), { status: 200 });
 
   } catch (error) {
     console.error("❌ Error en webhook:", error);
-    return res.status(500).json({ error: "Internal Server Error" });
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
   }
 }
 
-// Función para hashear datos como exige Meta
-import crypto from "crypto";
-function hash(value) {
-  return crypto.createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
-}
