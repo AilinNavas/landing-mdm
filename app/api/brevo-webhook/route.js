@@ -140,7 +140,7 @@ function hash(value) {
 export async function POST(req) {
   try {
     const secret = process.env.BREVO_WEBHOOK_SECRET;
-    const apiKey = req.headers.get("x-api-key");
+    const apiKey = req.headers.get("x-brevo-secret");
     if (apiKey !== secret) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
     }
