@@ -1,46 +1,4 @@
 
-// export async function POST(req) {
-//   try {
-//     const data = await req.json();
-
-//     const payload = {
-//       data: [
-//         {
-//           event_name: "PageView",
-//           event_time: Math.floor(Date.now() / 1000),
-//           action_source: "website",
-//           event_source_url: data.fullUrl || `https://my-bussines.com${data.path}`,
-//           user_data: {
-//             fbc: data.fbc
-//           },
-//           custom_data: {
-//             referrer: data.referrer || "",
-//             metadata: data
-//           }
-//         }
-//       ],
-//       test_event_code: process.env.META_TEST_EVENT_CODE || undefined // solo para test
-//     };
-
-//     const res = await fetch(`https://graph.facebook.com/v19.0/${process.env.META_PIXEL_ID}/events?access_token=${process.env.META_ACCESS_TOKEN}`, {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(payload)
-//     });
-
-//     const json = await res.json();
-//     if (!res.ok) {
-//       console.error("Meta API Error [PageView]:", json);
-//       return new Response(JSON.stringify({ error: json }), { status: 500 });
-//     }
-
-//     return new Response(JSON.stringify({ status: "ok", metaResponse: json }), { status: 200 });
-//   } catch (err) {
-//     console.error("PageView Error:", err);
-//     return new Response(JSON.stringify({ error: "Failed" }), { status: 500 });
-//   }
-// }
-
 export async function POST(req) {
   try {
     const body = await req.json();
