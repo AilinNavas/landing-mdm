@@ -25,6 +25,8 @@ export async function POST(req) {
     const contactData = await contactRes.json();
     const email = contactData.email?.trim().toLowerCase();
     const phone = contactData.attributes?.SMS?.trim();
+    const last_name = contactData.attributes?.LastName?.trim();
+    const first_name = contactData.attributes?.FirstName?.trim();
 
     // Función para hashear datos como pide Meta
     const sha256 = (str) =>
@@ -55,7 +57,9 @@ export async function POST(req) {
           action_source: "website",
           user_data: {
             em: email ? [sha256(email)] : [],
-            ph: phone ? [sha256(phone)] : []
+            ph: phone ? [sha256(phone)] : [],
+            fn: first_name ? [sha256(first_name)] : [],
+            ln: last_name ? [sha256(last_name)] : []
           }
         }
       ]
