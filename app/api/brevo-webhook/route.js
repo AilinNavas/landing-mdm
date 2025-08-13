@@ -7,7 +7,7 @@ export async function POST(req) {
 
     // 1️⃣ Validar secreto de Brevo
     const brevoSecret = req.headers.get("x-brevo-secret");
-   if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
+    if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
         headers: { "Content-Type": "application/json" }
@@ -21,7 +21,7 @@ export async function POST(req) {
       headers: { "api-key": brevoApiKey }
     });
 
- if (!contactRes.ok) {
+    if (!contactRes.ok) {
       return new Response(
         JSON.stringify({ error: `Error obteniendo contacto: ${contactRes.statusText}` }),
         { status: contactRes.status, headers: { "Content-Type": "application/json" } }
@@ -45,7 +45,7 @@ export async function POST(req) {
       case "Scheduled":
         eventName = "Schedule";
         break;
-      case "AttendedMeeting":
+      case "Attended":
         eventName = "AttendedMeeting";
         break;
       case "BecameClient":
@@ -63,10 +63,14 @@ export async function POST(req) {
           event_time: Math.floor(Date.now() / 1000), // ahora mismo
           action_source: "website",
           user_data: {
-            em: email ? [sha256(email)] : [],
-            ph: phone ? [sha256(phone)] : [],
-            fn: firstName ? [sha256(firstName)] : [],
-            ln: lastName ? [sha256(lastName)] : []
+            // em: email ? [sha256(email)] : [],
+            // ph: phone ? [sha256(phone)] : [],
+            // fn: firstName ? [sha256(firstName)] : [],
+            // ln: lastName ? [sha256(lastName)] : []
+            em: email ? email : [],
+            ph: phone ? phone : [],
+            fn: firstName ? firstName : [],
+            ln: lastName ? lastName : []
           }
         }
       ]
@@ -82,9 +86,9 @@ export async function POST(req) {
     }
 
     // 5️⃣ Si existe código de evento de prueba, agregarlo
-    if (process.env.META_TEST_EVENT_CODE) {
-      payload.test_event_code = process.env.META_TEST_EVENT_CODE;
-    }
+    // if (process.env.META_TEST_EVENT_CODE) {
+    //   payload.test_event_code = process.env.META_TEST_EVENT_CODE;
+    // }
 
     console.log("📦 Payload para Meta:", JSON.stringify(payload, null, 2));
 
@@ -107,7 +111,7 @@ export async function POST(req) {
     // return Response.json({ status: "ok", metaResponse: metaResponseData });
   } catch (error) {
     console.error("❌ Error en webhook:", error);
-     return new Response(
+    return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
