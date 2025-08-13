@@ -7,6 +7,8 @@ export async function POST(req) {
 
     // 1️⃣ Validar secreto de Brevo
     const brevoSecret = req.headers.get("x-brevo-secret");
+    console.log("🛠 Headers:", Object.fromEntries(req.headers));
+
     if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
@@ -45,6 +47,8 @@ export async function POST(req) {
     }
 
     const contactData = await contactRes.json();
+    console.log("👤 Datos de contacto:", contactData);
+
     const email = contactData.email?.trim().toLowerCase();
     const phone = contactData.attributes?.SMS?.trim();
     const firstName = contactData.attributes?.FIRSTNAME?.trim().toLowerCase();
