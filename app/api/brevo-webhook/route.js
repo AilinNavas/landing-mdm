@@ -136,28 +136,6 @@
 import crypto from "crypto";
 
 
-// Función para obtener contacto desde Brevo
-async function getContactData(contactId) {
-  const res = await fetch(`https://api.brevo.com/v3/contacts/${contactId}`, {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      "api-key": process.env.BREVO_API_KEY
-    }
-  });
-
-  if (!res.ok) {
-    throw new Error(`Error obteniendo contacto: ${res.statusText}`);
-  }
-
-  return res.json();
-}
-
-// Función para hashear datos con SHA256
-function hash(value) {
-  return crypto.createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
-}
-
 export async function POST(req) {
   try {
     // 1️⃣ Verificar secreto de Brevo
@@ -229,3 +207,25 @@ export async function POST(req) {
 }
 
 
+
+// Función para obtener contacto desde Brevo
+async function getContactData(contactId) {
+  const res = await fetch(`https://api.brevo.com/v3/contacts/${contactId}`, {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      "api-key": process.env.BREVO_API_KEY
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error(`Error obteniendo contacto: ${res.statusText}`);
+  }
+
+  return res.json();
+}
+
+// Función para hashear datos con SHA256
+function hash(value) {
+  return crypto.createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
