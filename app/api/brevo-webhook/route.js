@@ -183,6 +183,8 @@ export async function POST(req) {
       ]
     };
 
+    console.log("📦 Payload para Meta:", payload);
+
     // 6️⃣ Enviar a Meta CAPI
     const fbResponse = await fetch(
       `https://graph.facebook.com/v20.0/${process.env.META_PIXEL_ID}/events?access_token=${process.env.META_ACCESS_TOKEN}`,
