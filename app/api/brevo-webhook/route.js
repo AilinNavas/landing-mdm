@@ -1,117 +1,113 @@
+import crypto from "crypto";
 
- import crypto from "crypto";
+export async function POST(req) {
+  try {
+    const body = await req.json();
+    console.log("📩 Webhook recibido:", body);
 
- export async function POST(req) {
-   try {
-     const body = await req.json();
-     console.log("📩 Webhook recibido:", body);
+    // Validar secreto Brevo
+    const brevoSecret = req.headers.get("x-brevo-secret");
+    if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
 
-     // 1️⃣ Validar secreto de Brevo
-     const brevoSecret = req.headers.get("x-brevo-secret");
-     if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
-       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-         status: 401,
-         headers: { "Content-Type": "application/json" }
-       });
-     }
+    // Normalizar stage_name
+    const stage = body.stage_name?.trim().toLowerCase();
+    let eventName = null;
 
-     // 2️⃣ Obtener datos del contacto desde Brevo
-     const contactId = body.contact_id;
-     const brevoApiKey = process.env.BREVO_API_KEY;
-     const contactRes = await fetch(`https://api.brevo.com/v3/contacts/${contactId}`, {
-       headers: { "api-key": brevoApiKey }
-     });
+    if (stage === "scheduled") {
+      eventName = "Schedule";
+    } else if (stage === "attended") {
+      eventName = "AttendedMeeting";
+    } else if (stage === "becameclient") {
+      eventName = "BecameClient";
+    }
 
-     if (!contactRes.ok) {
-       return new Response(
-         JSON.stringify({ error: `Error obteniendo contacto: ${contactRes.statusText}` }),
-         { status: contactRes.status, headers: { "Content-Type": "application/json" } }
-       );
-     }
+    // Si no es un evento válido, salir
+    if (!eventName) {
+      console.log(`⚠️ Evento ignorado: stage_name=${body.stage_name}`);
+      return new Response(JSON.stringify({ status: "ignored" }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
 
-     const contactData = await contactRes.json();
-     const email = contactData.email?.trim().toLowerCase();
-     const phone = contactData.attributes?.SMS?.trim();
-     const firstName = contactData.attributes?.FIRSTNAME?.trim().toLowerCase();
-     const lastName = contactData.attributes?.LASTNAME?.trim().toLowerCase();
+    // Obtener datos del contacto
+    const contactId = body.contact_id;
+    const contactRes = await fetch(`https://api.brevo.com/v3/contacts/${contactId}`, {
+      headers: { "api-key": process.env.BREVO_API_KEY }
+    });
 
-     // Función para hashear datos
-     const sha256 = (str) =>
-       crypto.createHash("sha256").update(str).digest("hex");
+    if (!contactRes.ok) {
+      return new Response(
+        JSON.stringify({ error: `Error obteniendo contacto: ${contactRes.statusText}` }),
+        { status: contactRes.status, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
-     // 3️⃣ Mapear stage_name a event_name correcto
-     let eventName;
-     switch (body.stage_name) {
-       case "Scheduled":
-         eventName = "Schedule";
-         break;
-       case "Attended":
-         eventName = "AttendedMeeting";
-         break;
-       case "BecameClient":
-         eventName = "BecameClient";
-         break;
-       default:
-         eventName = "CustomEvent";
-     }
+    const contactData = await contactRes.json();
+    const email = contactData.email?.trim().toLowerCase();
+    const phone = contactData.attributes?.SMS?.trim();
+    const firstName = contactData.attributes?.FIRSTNAME?.trim().toLowerCase();
+    const lastName = contactData.attributes?.LASTNAME?.trim().toLowerCase();
 
-     // 4️⃣ Construir payload base
-     const payload = {
-       data: [
-         {
-           event_name: eventName,
-           event_time: Math.floor(Date.now() / 1000),
-           event_id: crypto.randomUUID(),
-           action_source: "website",
-           user_data: {
-             em: email ? [sha256(email)] : [],
-             ph: phone ? [sha256(phone)] : [],
-             fn: firstName ? [sha256(firstName)] : [],
-             ln: lastName ? [sha256(lastName)] : []
-           }
-         }
-       ],
-       test_event_code: process.env.META_TEST_EVENT_CODE
-     };
+    const sha256 = (str) => crypto.createHash("sha256").update(str).digest("hex");
 
-     // Si es BecameClient, agregar custom_data
-     if (eventName === "BecameClient") {
-       payload.data[0].custom_data = {
-         value: 3500,
-         currency: "USD",
-         customer_segmentation: "new_customer_to_business"
-       };
-     }
+    // Construir payload
+    const payload = {
+      data: [
+        {
+          event_name: eventName,
+          event_time: Math.floor(Date.now() / 1000),
+          event_id: crypto.randomUUID(),
+          action_source: "website",
+          user_data: {
+            em: email ? [sha256(email)] : [],
+            ph: phone ? [sha256(phone)] : [],
+            fn: firstName ? [sha256(firstName)] : [],
+            ln: lastName ? [sha256(lastName)] : []
+          }
+        }
+      ],
+      test_event_code: process.env.META_TEST_EVENT_CODE
+    };
 
-     console.log("📦 Payload para Meta:", JSON.stringify(payload, null, 2));
+    if (eventName === "BecameClient") {
+      payload.data[0].custom_data = {
+        value: 3500,
+        currency: "USD",
+        customer_segmentation: "new_customer_to_business"
+      };
+    }
 
-     // 5️⃣ Enviar a Meta CAPI
-     const metaPixelId = process.env.META_PIXEL_ID;
-     const metaAccessToken = process.env.META_ACCESS_TOKEN;
+    console.log("📦 Payload para Meta:", JSON.stringify(payload, null, 2));
 
-     const metaRes = await fetch(
-       `https://graph.facebook.com/v19.0/${metaPixelId}/events?access_token=${metaAccessToken}`,
-       {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify(payload)
-       }
-     );
+    // Enviar a Meta
+    const metaRes = await fetch(
+      `https://graph.facebook.com/v19.0/${process.env.META_PIXEL_ID}/events?access_token=${process.env.META_ACCESS_TOKEN}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }
+    );
 
-     const metaResponseData = await metaRes.json();
-     console.log("📤 Respuesta de Meta:", JSON.stringify(metaResponseData, null, 2));
+    const metaResponseData = await metaRes.json();
+    console.log("📤 Respuesta de Meta:", JSON.stringify(metaResponseData, null, 2));
 
-     // 6️⃣ Retornar resultado
-     return new Response(
-       JSON.stringify({ status: "ok", metaResponse: metaResponseData }),
-       { status: 200, headers: { "Content-Type": "application/json" } }
-     );
+    return new Response(
+      JSON.stringify({ status: "ok", metaResponse: metaResponseData }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
 
-   } catch (error) {
-     console.error("❌ Error en webhook:", error);
-     return new Response(
-       JSON.stringify({ error: error.message }),
-       { status: 500, headers: { "Content-Type": "application/json" } }
-     );
-   }
- }
+  } catch (error) {
+    console.error("❌ Error en webhook:", error);
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
+}
