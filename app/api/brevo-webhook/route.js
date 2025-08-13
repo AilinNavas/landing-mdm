@@ -7,8 +7,11 @@ export async function POST(req) {
 
     // 1️⃣ Validar secreto de Brevo
     const brevoSecret = req.headers.get("x-brevo-secret");
-    if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
-      return new Response("Unauthorized", { status: 401 });
+   if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json" }
+      });
     }
 
     // 2️⃣ Obtener datos del contacto desde Brevo
@@ -18,8 +21,11 @@ export async function POST(req) {
       headers: { "api-key": brevoApiKey }
     });
 
-    if (!contactRes.ok) {
-      throw new Error(`Error obteniendo contacto: ${contactRes.statusText}`);
+ if (!contactRes.ok) {
+      return new Response(
+        JSON.stringify({ error: `Error obteniendo contacto: ${contactRes.statusText}` }),
+        { status: contactRes.status, headers: { "Content-Type": "application/json" } }
+      );
     }
 
     const contactData = await contactRes.json();
@@ -101,6 +107,9 @@ export async function POST(req) {
     // return Response.json({ status: "ok", metaResponse: metaResponseData });
   } catch (error) {
     console.error("❌ Error en webhook:", error);
-    return new Response(`Error: ${error.message}`, { status: 500 });
+     return new Response(
+      JSON.stringify({ error: error.message }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
   }
 }
