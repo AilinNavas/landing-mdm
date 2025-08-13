@@ -5,7 +5,7 @@ export async function POST(req) {
     const body = await req.json();
     console.log("📩 Webhook recibido:", body);
 
-    // Validar secreto Brevo
+    // 1️⃣ Validar secreto de Brevo
     const brevoSecret = req.headers.get("x-brevo-secret");
     if (brevoSecret !== process.env.BREVO_WEBHOOK_SECRET) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
@@ -14,31 +14,27 @@ export async function POST(req) {
       });
     }
 
-    // Normalizar stage_name
-    const stage = body.stage_name?.trim().toLowerCase();
-    let eventName = null;
+    // 2️⃣ Mapear stage_name → event_name (solo los permitidos)
+    const eventMap = {
+      Scheduled: "Schedule",
+      Attended: "AttendedMeeting",
+      BecameClient: "BecameClient"
+    };
 
-    if (stage === "scheduled") {
-      eventName = "Schedule";
-    } else if (stage === "attended") {
-      eventName = "AttendedMeeting";
-    } else if (stage === "becameclient") {
-      eventName = "BecameClient";
-    }
-
-    // Si no es un evento válido, salir
+    const eventName = eventMap[body.stage_name];
     if (!eventName) {
-      console.log(`⚠️ Evento ignorado: stage_name=${body.stage_name}`);
-      return new Response(JSON.stringify({ status: "ignored" }), {
-        status: 200,
-        headers: { "Content-Type": "application/json" }
-      });
+      console.warn(`⚠️ stage_name desconocido: ${body.stage_name}. Evento ignorado.`);
+      return new Response(
+        JSON.stringify({ status: "ignored", reason: "Unknown stage_name" }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      );
     }
 
-    // Obtener datos del contacto
+    // 3️⃣ Obtener datos del contacto desde Brevo
     const contactId = body.contact_id;
+    const brevoApiKey = process.env.BREVO_API_KEY;
     const contactRes = await fetch(`https://api.brevo.com/v3/contacts/${contactId}`, {
-      headers: { "api-key": process.env.BREVO_API_KEY }
+      headers: { "api-key": brevoApiKey }
     });
 
     if (!contactRes.ok) {
@@ -54,9 +50,11 @@ export async function POST(req) {
     const firstName = contactData.attributes?.FIRSTNAME?.trim().toLowerCase();
     const lastName = contactData.attributes?.LASTNAME?.trim().toLowerCase();
 
-    const sha256 = (str) => crypto.createHash("sha256").update(str).digest("hex");
+    // Función para hashear datos
+    const sha256 = (str) =>
+      crypto.createHash("sha256").update(str).digest("hex");
 
-    // Construir payload
+    // 4️⃣ Construir payload base
     const payload = {
       data: [
         {
@@ -75,6 +73,7 @@ export async function POST(req) {
       test_event_code: process.env.META_TEST_EVENT_CODE
     };
 
+    // Si es BecameClient, agregar custom_data
     if (eventName === "BecameClient") {
       payload.data[0].custom_data = {
         value: 3500,
@@ -85,9 +84,12 @@ export async function POST(req) {
 
     console.log("📦 Payload para Meta:", JSON.stringify(payload, null, 2));
 
-    // Enviar a Meta
+    // 5️⃣ Enviar a Meta CAPI
+    const metaPixelId = process.env.META_PIXEL_ID;
+    const metaAccessToken = process.env.META_ACCESS_TOKEN;
+
     const metaRes = await fetch(
-      `https://graph.facebook.com/v19.0/${process.env.META_PIXEL_ID}/events?access_token=${process.env.META_ACCESS_TOKEN}`,
+      `https://graph.facebook.com/v19.0/${metaPixelId}/events?access_token=${metaAccessToken}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -98,6 +100,7 @@ export async function POST(req) {
     const metaResponseData = await metaRes.json();
     console.log("📤 Respuesta de Meta:", JSON.stringify(metaResponseData, null, 2));
 
+    // 6️⃣ Retornar resultado
     return new Response(
       JSON.stringify({ status: "ok", metaResponse: metaResponseData }),
       { status: 200, headers: { "Content-Type": "application/json" } }
