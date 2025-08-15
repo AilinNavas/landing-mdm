@@ -44,8 +44,7 @@ export async function POST(req) {
             metadata: body
           }
         }
-      ],
-      test_event_code: process.env.META_TEST_EVENT_CODE || undefined
+      ]
     };
 
 
