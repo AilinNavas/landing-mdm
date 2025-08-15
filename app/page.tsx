@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image"
+import Link from "next/link"
 import {
   ArrowRight,
   Check,
@@ -107,7 +108,7 @@ export default function WebDesignPage() {
                   transition={{ type: 'spring', stiffness: 250 }}
                 >
                   <Button
-                   data-track="book-button"
+                    data-track="book-button"
                     size="lg"
                     className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
                     asChild
@@ -305,13 +306,40 @@ export default function WebDesignPage() {
           <Image alt="logo-mucho-dental-marketing" src={'/images/logo2.webp'} width={300} height={200} />
         </div>
 
+        <div className="bg-[#1D3557] ">
+
+          <div className=" mx-auto px-4 py-8 max-w-4xl flex justify-between text-sm border-t border-slate-400/60">
+            <div className="">
+              <p className="text-slate-400 ">
+                © {new Date().getFullYear()} Mucho Marketing LLC. All rights reserved.
+              </p>
+            </div>
+
+            <ul className="flex space-x-4">
+              <li>
+                <Link href="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-and-conditions" className="text-slate-400 hover:text-white transition-colors">
+                  Terms and Conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
       </main>
 
       {/* Sticky CTA Bar for Mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white py-4 shadow-lg md:hidden">
         <div className="container mx-auto flex items-center justify-between px-4">
           <Button
-           data-track="book-button"
+            data-track="book-button"
             className="w-full bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
             asChild>
             <a

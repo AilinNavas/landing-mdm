@@ -90,7 +90,7 @@ export default function DreamSiteFlow() {
               Ready to See Your Future Website?
             </h3>
             <p className="text-gray-300 mb-8 text-lg max-w-2xl mx-auto">
-              Join hundreds of dental professionals who've transformed their online presence with our risk-free preview process.
+              Join dental professionals who've transformed their online presence with our risk-free preview process.
             </p>
 
             <motion.div
@@ -98,20 +98,22 @@ export default function DreamSiteFlow() {
               whileTap={{ scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 250 }}
             >
-              <Button
-            id='ClickBookButton'
-                className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
-                asChild
-              ><a
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center"
-              >
-                  Free Web Design Preview
-                  <ArrowRight className="ml-1 h-5 w-5" />
-                </a>
-              </Button>
+               <Button
+                  data-track="book-button"
+                  size="lg"
+                  className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                  asChild
+                ><a
+                  href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                    Free Web Design Preview
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+
+                </Button>
             </motion.div>
 
             <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">

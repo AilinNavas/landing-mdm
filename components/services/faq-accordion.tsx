@@ -1,7 +1,8 @@
 "use client"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, DollarSign, Clock, Shield, Brain, Lock, RotateCcw } from "lucide-react"
+import { ChevronDown, DollarSign, Clock, Shield, Brain, Lock, RotateCcw, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const FAQAccordion = () => {
   const [openItems, setOpenItems] = useState<string[]>([])
@@ -254,20 +255,24 @@ const FAQAccordion = () => {
             <p className="text-gray-300 mb-6">
               We're here to help. Book a free consultation and get all your questions answered.
             </p>
-            <motion.button
-            id="ClickBookButton"
-              className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white px-8 py-3 rounded-lg  uppercase tracking-wide hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg "
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            ><a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              Free Web Design Preview
-              </a>
-            </motion.button>
+          
+              <Button
+                  data-track="book-button"
+                  size="lg"
+                  className="bg-gradient-to-r from-[#4CAF50] to-[#2e7d32] text-white hover:from-[#45a049] hover:to-[#256029] transition-all shadow-lg rounded-md uppercase text-lg tracking-wide"
+                  asChild
+                ><a
+                  href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0t84Q6FLyNHj0_TMQk1ConSYPUz4S0NMjpswNnt6Huz8o5IWpLx0kHzfW5HWhHV0-dNepCfcVp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                    Free Web Design Preview
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+
+                </Button>
+               
           </div>
         </motion.div>
       </div>
