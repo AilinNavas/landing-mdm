@@ -74,7 +74,6 @@ export async function POST(req) {
           }
         }
       ],
-      test_event_code: process.env.META_TEST_EVENT_CODE
     };
 
     // Si es BecameClient, agregar custom_data
